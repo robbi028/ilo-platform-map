@@ -3,37 +3,144 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Likelihood of ratifying ILO Convention No. 193 (Platform Economy)</title>
+<title>ILO Platform Economy Ratification Outlook</title>
 <style>
+  :root {
+    --ink: #1d2329;
+    --muted: #66717d;
+    --soft: #eef1f3;
+    --panel: #ffffff;
+    --line: #dfe5e8;
+    --high: #168a4a;
+    --moderate: #d5a612;
+    --low: #d76d1f;
+    --very-low: #bd352c;
+    --no-data: #f1efe8;
+  }
+
+  * { box-sizing: border-box; }
+
   body {
     margin: 0;
-    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
-    background: #ffffff;
-    color: #1a1a1a;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: #fbfcfc;
+    color: var(--ink);
   }
+
   #wrap {
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 40px 24px 30px;
-    box-sizing: border-box;
+    padding: 28px 24px 30px;
   }
+
+  .topbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 22px;
+    align-items: start;
+    margin-bottom: 18px;
+  }
+
   h1 {
-    font-size: 22px;
-    font-weight: 600;
-    margin: 0 0 4px;
+    font-size: 26px;
+    line-height: 1.15;
+    font-weight: 680;
+    margin: 0 0 8px;
+    letter-spacing: 0;
   }
+
   .sub {
-    font-size: 13px;
-    color: #6b6b6b;
-    margin: 0 0 18px;
+    max-width: 760px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 0;
   }
+
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(72px, 1fr));
+    gap: 8px;
+    min-width: 360px;
+  }
+
+  .summary-item {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    padding: 10px;
+  }
+
+  .summary-number {
+    display: block;
+    font-size: 21px;
+    font-weight: 720;
+    line-height: 1;
+  }
+
+  .summary-label {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .controls {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .search-wrap {
+    position: relative;
+  }
+
+  .search-wrap input {
+    width: 100%;
+    padding: 9px 34px 9px 11px;
+    border: 1px solid #cbd3d8;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    color: var(--ink);
+    background: #fff;
+  }
+
+  .search-wrap input:focus {
+    border-color: #687a89;
+    box-shadow: 0 0 0 3px rgba(104, 122, 137, 0.14);
+  }
+
+  .search-clear {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #7d8992;
+    font-size: 17px;
+    line-height: 1;
+    display: none;
+    padding: 0;
+  }
+
+  .search-clear:hover { color: var(--ink); }
+
   .legend {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px;
-    margin-bottom: 14px;
+    gap: 10px 16px;
     font-size: 13px;
+    color: #34414c;
   }
+
   .legend span.dot {
     display: inline-block;
     width: 13px;
@@ -43,420 +150,733 @@
     vertical-align: -2px;
   }
 
-  /* Search */
-  .search-wrap {
-    margin-bottom: 12px;
+  .map-shell {
     position: relative;
-    max-width: 280px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: #fff;
   }
-  .search-wrap input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 7px 30px 7px 10px;
-    border: 1px solid #d0d0d0;
-    border-radius: 6px;
-    font-size: 13px;
-    font-family: inherit;
-    outline: none;
-    color: #1a1a1a;
-  }
-  .search-wrap input:focus {
-    border-color: #888;
-  }
-  .search-clear {
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #999;
-    font-size: 16px;
-    line-height: 1;
-    display: none;
-    padding: 0;
-  }
-  .search-clear:hover { color: #444; }
 
   #map {
     width: 100%;
+    min-height: 320px;
   }
+
   #map svg {
     width: 100%;
     height: auto;
     display: block;
   }
+
+  .status {
+    padding: 52px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .no-results {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+    display: none;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--muted);
+    font-size: 12px;
+  }
+
   #tooltip {
     position: absolute;
     display: none;
     pointer-events: none;
-    background: #ffffff;
-    border: 1px solid #d9d9d9;
+    background: #fff;
+    border: 1px solid #d8dee2;
     border-radius: 8px;
     padding: 10px 12px;
     font-size: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 24px rgba(24, 38, 50, 0.12);
     z-index: 10;
-    min-width: 200px;
-    max-width: 260px;
+    min-width: 220px;
+    max-width: 280px;
   }
+
   .tt-name {
-    font-weight: 600;
+    font-weight: 650;
     margin-bottom: 4px;
     font-size: 13px;
   }
+
   .tt-tier {
-    color: #6b6b6b;
+    color: var(--muted);
     margin-bottom: 8px;
   }
-  .tt-cats {
-    border-top: 1px solid #f0f0f0;
-    padding-top: 7px;
+
+  .tt-score {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px solid #edf0f2;
+    padding-top: 7px;
   }
-  .tt-cat {
-    display: grid;
-    grid-template-columns: 72px 1fr;
-    gap: 6px;
-    line-height: 1.4;
-  }
-  .tt-cat-label {
-    color: #aaa;
-    font-size: 11px;
-    padding-top: 1px;
-  }
-  .tt-cat-val {
-    color: #1a1a1a;
-  }
+
   .tt-hint {
     margin-top: 8px;
-    border-top: 1px solid #f0f0f0;
+    border-top: 1px solid #edf0f2;
     padding-top: 6px;
-    color: #bbb;
+    color: #8c969e;
     font-size: 11px;
   }
 
-  /* Side panel */
+  .methodology {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 18px;
+    padding: 18px 0 4px;
+  }
+
+  .methodology h2,
+  .notes h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #596672;
+    margin: 0 0 10px;
+  }
+
+  .methodology p,
+  .notes p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  .weights {
+    display: grid;
+    gap: 8px;
+  }
+
+  .weight {
+    display: grid;
+    grid-template-columns: 128px 1fr 42px;
+    gap: 10px;
+    align-items: center;
+    font-size: 12px;
+    color: #53616c;
+  }
+
+  .track {
+    height: 8px;
+    border-radius: 999px;
+    background: #e8edf0;
+    overflow: hidden;
+  }
+
+  .fill {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: #536f82;
+  }
+
   #panel {
     position: fixed;
     top: 0;
     right: 0;
-    width: 360px;
+    width: min(420px, 100vw);
     height: 100%;
-    background: #fff;
-    box-shadow: -4px 0 20px rgba(0,0,0,0.10);
+    background: var(--panel);
+    box-shadow: -10px 0 28px rgba(19, 30, 40, 0.16);
     transform: translateX(100%);
-    transition: transform 0.25s ease;
+    transition: transform 0.24s ease;
     z-index: 100;
     overflow-y: auto;
-    box-sizing: border-box;
   }
-  #panel.open {
-    transform: translateX(0);
-  }
+
+  #panel.open { transform: translateX(0); }
+
   .panel-inner {
     padding: 28px 24px 40px;
   }
+
   .panel-close {
     position: absolute;
-    top: 16px;
-    right: 18px;
-    background: none;
+    top: 15px;
+    right: 17px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
     border: none;
-    font-size: 20px;
     cursor: pointer;
-    color: #888;
-    line-height: 1;
-    padding: 4px;
-  }
-  .panel-close:hover { color: #1a1a1a; }
-  .panel-country {
+    color: #687680;
     font-size: 20px;
-    font-weight: 700;
-    margin: 0 0 8px;
-    padding-right: 28px;
+    line-height: 1;
+    padding: 0;
   }
+
+  .panel-close:hover { color: var(--ink); }
+
+  .panel-country {
+    font-size: 22px;
+    font-weight: 720;
+    margin: 0 0 9px;
+    padding-right: 34px;
+  }
+
+  .panel-tier-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
   .panel-tier-badge {
     display: inline-block;
-    padding: 3px 10px;
-    border-radius: 20px;
+    padding: 4px 10px;
+    border-radius: 999px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 650;
     color: #fff;
-    margin-bottom: 22px;
   }
+
+  .panel-score {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
   .panel-section-title {
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 680;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: #999;
+    color: #71808b;
     margin: 0 0 10px;
   }
+
   .panel-cats {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 10px;
     margin-bottom: 24px;
   }
+
   .panel-cat {
-    background: #f7f7f5;
+    border: 1px solid #e4e9ec;
     border-radius: 8px;
-    padding: 10px 12px;
+    padding: 11px 12px;
+    background: #fbfcfc;
   }
+
+  .panel-cat-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 7px;
+  }
+
   .panel-cat-name {
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 680;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #999;
-    margin-bottom: 3px;
+    color: #6f7d88;
   }
+
+  .panel-cat-score {
+    font-size: 12px;
+    color: #53616c;
+    font-variant-numeric: tabular-nums;
+  }
+
   .panel-cat-text {
     font-size: 13px;
-    color: #1a1a1a;
+    color: var(--ink);
     line-height: 1.45;
   }
+
+  .detail-section {
+    border: 1px solid #e4e9ec;
+    border-radius: 8px;
+    padding: 12px;
+    background: #fbfcfc;
+    margin-bottom: 10px;
+  }
+
+  .detail-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #33414d;
+    margin: 0 0 8px;
+  }
+
+  .detail-list {
+    display: grid;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+    color: var(--ink);
+  }
+
+  .detail-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .detail-text {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  .detail-meta,
+  .detail-note {
+    margin: 7px 0 0;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  .detail-note {
+    border-left: 3px solid #d5a612;
+    padding-left: 9px;
+  }
+
+  .detail-section a {
+    color: #0f5d90;
+    font-weight: 600;
+  }
+
   .panel-divider {
     border: none;
-    border-top: 1px solid #efefef;
+    border-top: 1px solid #edf0f2;
     margin: 20px 0;
   }
+
   .panel-leg-btn {
     display: inline-block;
     margin-top: 4px;
-    padding: 8px 16px;
-    background: #1a1a1a;
+    padding: 9px 16px;
+    background: var(--ink);
     color: #fff;
-    border-radius: 6px;
+    border-radius: 7px;
     font-size: 13px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
   }
-  .panel-leg-btn:hover { background: #333; }
+
+  .panel-leg-btn:hover { background: #35414b; }
+
   .panel-leg-coming {
-    font-size: 12px;
-    color: #bbb;
-    font-style: italic;
+    font-size: 13px;
+    color: var(--muted);
     margin: 4px 0 0;
+  }
+
+  .notes {
+    border-top: 1px solid var(--line);
+    margin-top: 16px;
+    padding-top: 16px;
   }
 
   .footer {
     font-size: 11px;
-    color: #9a9a9a;
+    color: #7f8a92;
     margin-top: 14px;
     line-height: 1.5;
   }
+
   .disclaimer {
     font-size: 11px;
-    color: #b0b0b0;
+    color: #88939a;
     margin-top: 10px;
     line-height: 1.5;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 10px;
+  }
+
+  path.country:focus {
+    outline: none;
+    stroke: #17212a;
+    stroke-width: 1.5;
+  }
+
+  @media (max-width: 820px) {
+    #wrap { padding: 22px 16px 26px; }
+    .topbar,
+    .controls,
+    .methodology {
+      grid-template-columns: 1fr;
+    }
+    .summary { min-width: 0; }
+    h1 { font-size: 23px; }
+  }
+
+  @media (max-width: 520px) {
+    .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .legend { gap: 8px 12px; }
+    .weight { grid-template-columns: 104px 1fr 38px; }
+    .panel-inner { padding: 26px 18px 34px; }
   }
 </style>
 </head>
 <body>
 <div id="wrap">
-  <h1>Likelihood of ratifying ILO Convention No. 193 (Platform Economy)</h1>
-  <p class="sub">Composite assessment based on ILC 114th Session vote record, ILO ratification history, existing domestic platform-worker legislation, and tripartite consensus</p>
-  <div class="legend">
-    <span><span class="dot" style="background:#2E9E44"></span>High likelihood</span>
-    <span><span class="dot" style="background:#E8C72E"></span>Some likelihood</span>
-    <span><span class="dot" style="background:#E8821E"></span>Low likelihood</span>
-    <span><span class="dot" style="background:#C0392B"></span>Very low likelihood</span>
-    <span><span class="dot" style="background:#F1EFE8;border:1px solid #ddd"></span>No data</span>
+  <header class="topbar">
+    <div>
+      <h1>ILO Platform Economy Ratification Outlook</h1>
+      <p class="sub">A country-by-country estimate of likely ratification behavior for the proposed Decent Work in the Platform Economy Convention, using voting behavior, ILO ratification history, domestic platform-work legislation, and tripartite alignment.</p>
+    </div>
+    <div class="summary" id="summary" aria-label="Countries by likelihood tier"></div>
+  </header>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <input type="text" id="search" placeholder="Search for a country" autocomplete="off" aria-label="Search for a country">
+      <button class="search-clear" id="search-clear" title="Clear search" aria-label="Clear search">x</button>
+    </div>
+    <div class="legend" aria-label="Map legend">
+      <span><span class="dot" style="background:#168a4a"></span>High likelihood</span>
+      <span><span class="dot" style="background:#d5a612"></span>Some likelihood</span>
+      <span><span class="dot" style="background:#d76d1f"></span>Low likelihood</span>
+      <span><span class="dot" style="background:#bd352c"></span>Very low likelihood</span>
+      <span><span class="dot" style="background:#f1efe8;border:1px solid #cfd5d8"></span>No data</span>
+    </div>
   </div>
 
-  <div class="search-wrap">
-    <input type="text" id="search" placeholder="Search for a country…" autocomplete="off">
-    <button class="search-clear" id="search-clear" title="Clear">✕</button>
-  </div>
-
-  <div style="position: relative;">
-    <div id="map"></div>
+  <div class="map-shell">
+    <div id="map"><div class="status">Loading map data...</div></div>
     <div id="tooltip"></div>
+    <div class="no-results" id="no-results">No matching countries in the displayed dataset.</div>
   </div>
+
+  <section class="methodology" aria-label="Methodology">
+    <div>
+      <h2>How to read this</h2>
+      <p>The map is an outlook, not a prediction model. Scores translate available signals into four tiers so researchers can quickly spot where ratification appears politically and legally more plausible. Click a country to see the component signals behind the tier.</p>
+    </div>
+    <div class="weights" aria-label="Composite score weights">
+      <h2>Composite weighting</h2>
+      <div class="weight"><span>ILC vote</span><span class="track"><span class="fill" style="width:40%"></span></span><span>40%</span></div>
+      <div class="weight"><span>Ratification history</span><span class="track"><span class="fill" style="width:30%"></span></span><span>30%</span></div>
+      <div class="weight"><span>Domestic law</span><span class="track"><span class="fill" style="width:20%"></span></span><span>20%</span></div>
+      <div class="weight"><span>Tripartite signals</span><span class="track"><span class="fill" style="width:10%"></span></span><span>10%</span></div>
+    </div>
+  </section>
+
+  <section class="notes">
+    <h2>Sources and limits</h2>
+    <p>Sources: ILC 114th Session record vote on the Decent Work in the Platform Economy Convention; ILO NORMLEX ratifications by country; CBR Platform Work Index 2025; World Bank research on regulation of platform-based work; and direct legal research for countries not covered by other sources. 132 of 141 voting countries are shown; several small island states and microstates are not rendered at this map resolution.</p>
+  </section>
 
   <div class="footer">
-    Sources: ILC 114th Session record vote (Adoption of the Decent Work in the Platform Economy Convention); ILO NORMLEX ratifications by country; CBR Platform Work Index 2025 (Bishop, Carter &amp; Deakin, Cambridge); World Bank "Regulation of platform-based work" report; direct legal research for countries not covered by other sources.<br>
-    132 of 141 voting countries shown — 9 small island/microstates (e.g. Malta, Singapore, Bahrain) are not rendered at this map resolution.
+    This visualization is provided for informational and research purposes only and does not constitute legal advice.
   </div>
   <div class="disclaimer">
-    <strong>AI-generated content.</strong> This visualization was produced with AI assistance. Data may be incomplete or contain errors. It is provided for informational and research purposes only and does not constitute legal advice. Nothing on this page should be relied upon as a substitute for qualified legal counsel.
+    <strong>AI-generated content.</strong> The visualization was produced with AI assistance. Data may be incomplete or contain errors. Do not rely on this page as a substitute for qualified legal counsel or source-level legal research.
   </div>
 </div>
 
-<!-- Side panel -->
-<div id="panel">
-  <button class="panel-close" id="panel-close">✕</button>
+<div id="panel" aria-hidden="true">
+  <button class="panel-close" id="panel-close" aria-label="Close country details">x</button>
   <div class="panel-inner" id="panel-inner"></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <script>
-// ── Plain-language mappings ───────────────────────────────────────────────────
-
 function c1Text(v) {
-  if (v === null || v === undefined) return 'Did not participate in the vote (non-member or absent)';
-  if (v >= 1.0) return 'Voted in favor of adoption at the ILC 114th Session';
-  if (v >= 0.5) return 'Abstained or was not present for the vote';
-  return 'Voted against adoption at the ILC 114th Session';
+  if (v === null || v === undefined) return "Did not participate in the vote, was absent, or is outside the voting dataset";
+  if (v >= 1.0) return "Voted in favor of adoption at the ILC 114th Session";
+  if (v >= 0.5) return "Abstained or was not present for the vote";
+  return "Voted against adoption at the ILC 114th Session";
 }
 
 function c2Text(v) {
-  if (v === null || v === undefined) return 'Insufficient data on ratification history';
-  if (v >= 1.0) return 'Strong track record of ratifying ILO conventions';
-  if (v >= 0.5) return 'Moderate history of ratifying ILO conventions';
-  return 'Limited history of ratifying ILO conventions';
+  if (v === null || v === undefined) return "Insufficient data on ILO ratification history";
+  if (v >= 1.0) return "Strong track record of ratifying ILO conventions";
+  if (v >= 0.5) return "Moderate history of ratifying ILO conventions";
+  return "Limited history of ratifying ILO conventions";
 }
 
 function c3Text(v) {
-  if (v === null || v === undefined) return 'No data on domestic legislation';
-  if (v >= 1.0) return 'Has enacted dedicated platform-work legislation';
-  if (v >= 0.5) return 'Legislation in progress or partially in place';
-  return 'No dedicated platform-work legislation identified';
+  if (v === null || v === undefined) return "No data on domestic platform-work legislation";
+  if (v >= 1.0) return "Has enacted dedicated platform-work legislation";
+  if (v >= 0.5) return "Legislation is in progress, partial, or adjacent worker protections are in place";
+  return "No dedicated platform-work legislation identified";
 }
 
 function c4Text(v) {
-  if (v === null || v === undefined) return 'Insufficient tripartite data';
-  if (v >= 0.9) return 'Strong tripartite consensus in support of ratification';
-  if (v >= 0.75) return 'Broadly supportive tripartite environment';
-  if (v >= 0.55) return 'Mixed tripartite signals';
-  return 'Limited or weak tripartite alignment';
+  if (v === null || v === undefined) return "Insufficient tripartite data";
+  if (v >= 0.9) return "Strong tripartite alignment in support of ratification";
+  if (v >= 0.75) return "Broadly supportive tripartite environment";
+  if (v >= 0.55) return "Mixed tripartite signals";
+  return "Limited or weak tripartite alignment";
 }
 
 const tierLabel = {
-  High: 'High likelihood',
-  Moderate: 'Some likelihood',
-  Low: 'Low likelihood',
-  'Very Low': 'Very low likelihood'
+  High: "High likelihood",
+  Moderate: "Some likelihood",
+  Low: "Low likelihood",
+  "Very Low": "Very low likelihood"
 };
 
 const tierColor = {
-  High: '#2E9E44',
-  Moderate: '#E8C72E',
-  Low: '#E8821E',
-  'Very Low': '#C0392B'
+  High: "#168a4a",
+  Moderate: "#d5a612",
+  Low: "#d76d1f",
+  "Very Low": "#bd352c"
 };
 
-const noDataFill = '#F1EFE8';
-const borderColor = '#ffffff';
-const dimFill = '#dedad2';
+const tierOrder = ["High", "Moderate", "Low", "Very Low"];
+const noDataFill = "#f1efe8";
+const borderColor = "#ffffff";
+const dimFill = "#d9dee1";
 
-// ── Init ──────────────────────────────────────────────────────────────────────
+const metricRows = [
+  ["ILC vote", "c1", c1Text],
+  ["Ratification history", "c2", c2Text],
+  ["Domestic law", "c3", c3Text],
+  ["Tripartite signals", "c4", c4Text]
+];
+
+function formatScore(v) {
+  if (v === null || v === undefined) return "n/a";
+  return Math.round(v * 100) + "/100";
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  }[char]));
+}
 
 async function init() {
-  const scores = await fetch('scores.json').then(r => r.json());
+  const map = document.getElementById("map");
+  const summary = document.getElementById("summary");
+  const noResults = document.getElementById("no-results");
 
-  const svg = d3.select('#map').append('svg').attr('viewBox', '0 0 960 500');
-  const path = d3.geoPath(d3.geoNaturalEarth1().scale(155).translate([480, 250]));
-  const tooltip = d3.select('#tooltip');
-  const panel = document.getElementById('panel');
-  const panelInner = document.getElementById('panel-inner');
-
-  const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
-  const feats = topojson.feature(world, world.objects.countries).features;
-
-  function getFill(name, dimmed) {
-    if (dimmed) return dimFill;
-    const s = scores[name];
-    return s ? (tierColor[s.tier] || noDataFill) : noDataFill;
-  }
-
-  const paths = svg.selectAll('path').data(feats).join('path')
-    .attr('d', path)
-    .attr('stroke', borderColor)
-    .attr('stroke-width', 0.5)
-    .attr('fill', d => getFill(d.properties.name, false))
-    .style('cursor', d => scores[d.properties.name] ? 'pointer' : 'default')
-    .on('mousemove', function(event, d) {
-      const s = scores[d.properties.name];
-      if (!s) { tooltip.style('display', 'none'); return; }
-      const rect = document.getElementById('map').getBoundingClientRect();
-      tooltip.style('display', 'block')
-        .style('left', (event.clientX - rect.left + 14) + 'px')
-        .style('top',  (event.clientY - rect.top  - 10) + 'px')
-        .html(
-          '<div class="tt-name">' + d.properties.name + '</div>' +
-          '<div class="tt-tier">' + tierLabel[s.tier] + '</div>' +
-          '<div class="tt-cats">' +
-            '<div class="tt-cat"><span class="tt-cat-label">Vote</span><span class="tt-cat-val">' + c1Text(s.c1) + '</span></div>' +
-            '<div class="tt-cat"><span class="tt-cat-label">Ratification</span><span class="tt-cat-val">' + c2Text(s.c2) + '</span></div>' +
-            '<div class="tt-cat"><span class="tt-cat-label">Legislation</span><span class="tt-cat-val">' + c3Text(s.c3) + '</span></div>' +
-            '<div class="tt-cat"><span class="tt-cat-label">Tripartite</span><span class="tt-cat-val">' + c4Text(s.c4) + '</span></div>' +
-          '</div>' +
-          '<div class="tt-hint">Click for full detail</div>'
-        );
-    })
-    .on('mouseleave', () => tooltip.style('display', 'none'))
-    .on('click', function(event, d) {
-      const s = scores[d.properties.name];
-      if (!s) return;
-      tooltip.style('display', 'none');
-      openPanel(d.properties.name, s);
+  try {
+    const scores = await fetch("scores.json").then(r => {
+      if (!r.ok) throw new Error("Could not load scores.json");
+      return r.json();
     });
 
-  // ── Panel ─────────────────────────────────────────────────────────────────
-  function openPanel(name, s) {
-    const color = tierColor[s.tier] || '#999';
-    const legHtml = s.legislation_url
-      ? '<a class="panel-leg-btn" href="' + s.legislation_url + '" target="_blank" rel="noopener">View legislation →</a>'
-      : '<p class="panel-leg-coming">Links to legislation will be added shortly.</p>';
+    map.innerHTML = "";
+    renderSummary(scores, summary);
 
-    panelInner.innerHTML =
-      '<h2 class="panel-country">' + name + '</h2>' +
-      '<span class="panel-tier-badge" style="background:' + color + '">' + tierLabel[s.tier] + '</span>' +
-      '<p class="panel-section-title">Assessment by category</p>' +
-      '<div class="panel-cats">' +
-        cat('ILC 114th Session vote', c1Text(s.c1)) +
-        cat('ILO ratification history', c2Text(s.c2)) +
-        cat('Platform-work legislation', c3Text(s.c3)) +
-        cat('Tripartite consensus', c4Text(s.c4)) +
-      '</div>' +
-      '<hr class="panel-divider">' +
-      '<p class="panel-section-title">Platform-work legislation</p>' +
-      legHtml;
+    const svg = d3.select("#map").append("svg")
+      .attr("viewBox", "0 0 960 500")
+      .attr("role", "img")
+      .attr("aria-label", "World map showing likelihood of ratifying the ILO platform economy convention");
 
-    panel.classList.add('open');
-  }
+    const projection = d3.geoNaturalEarth1().scale(155).translate([480, 250]);
+    const path = d3.geoPath(projection);
+    const tooltip = d3.select("#tooltip");
+    const panel = document.getElementById("panel");
+    const panelInner = document.getElementById("panel-inner");
 
-  function cat(label, text) {
-    return '<div class="panel-cat"><div class="panel-cat-name">' + label + '</div><div class="panel-cat-text">' + text + '</div></div>';
-  }
+    const world = await d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");
+    const feats = topojson.feature(world, world.objects.countries).features;
 
-  document.getElementById('panel-close').addEventListener('click', () => panel.classList.remove('open'));
+    function getFill(name, dimmed) {
+      if (dimmed) return dimFill;
+      const s = scores[name];
+      return s ? (tierColor[s.tier] || noDataFill) : noDataFill;
+    }
 
-  // Close panel on map background click
-  svg.on('click', function(event) {
-    if (event.target.tagName === 'svg') panel.classList.remove('open');
-  });
+    const paths = svg.selectAll("path").data(feats).join("path")
+      .attr("class", "country")
+      .attr("d", path)
+      .attr("stroke", borderColor)
+      .attr("stroke-width", 0.55)
+      .attr("fill", d => getFill(d.properties.name, false))
+      .attr("tabindex", d => scores[d.properties.name] ? 0 : null)
+      .attr("role", d => scores[d.properties.name] ? "button" : null)
+      .attr("aria-label", d => {
+        const s = scores[d.properties.name];
+        return s ? d.properties.name + ", " + tierLabel[s.tier] + ", composite score " + formatScore(s.composite) : d.properties.name + ", no data";
+      })
+      .style("cursor", d => scores[d.properties.name] ? "pointer" : "default")
+      .on("mousemove focus", function(event, d) {
+        const s = scores[d.properties.name];
+        if (!s) {
+          tooltip.style("display", "none");
+          return;
+        }
+        const rect = document.getElementById("map").getBoundingClientRect();
+        const x = event.clientX ? event.clientX - rect.left + 14 : rect.width / 2;
+        const y = event.clientY ? event.clientY - rect.top - 10 : rect.height / 2;
+        tooltip.style("display", "block")
+          .style("left", Math.min(x, rect.width - 295) + "px")
+          .style("top", Math.max(12, y) + "px")
+          .html(
+            '<div class="tt-name">' + escapeHtml(d.properties.name) + '</div>' +
+            '<div class="tt-tier">' + tierLabel[s.tier] + '</div>' +
+            '<div class="tt-score"><span>Composite score</span><strong>' + formatScore(s.composite) + '</strong></div>' +
+            '<div class="tt-hint">Click for component detail</div>'
+          );
+      })
+      .on("mouseleave blur", () => tooltip.style("display", "none"))
+      .on("click", function(event, d) {
+        const s = scores[d.properties.name];
+        if (!s) return;
+        tooltip.style("display", "none");
+        openPanel(d.properties.name, s);
+      })
+      .on("keydown", function(event, d) {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        const s = scores[d.properties.name];
+        if (!s) return;
+        event.preventDefault();
+        openPanel(d.properties.name, s);
+      });
 
-  // ── Search ────────────────────────────────────────────────────────────────
-  const searchInput = document.getElementById('search');
-  const searchClear  = document.getElementById('search-clear');
+    function openPanel(name, s) {
+      const color = tierColor[s.tier] || "#687680";
+      const legHtml = s.legislation_url
+        ? '<a class="panel-leg-btn" href="' + escapeHtml(s.legislation_url) + '" target="_blank" rel="noopener">View legislation</a>'
+        : '<p class="panel-leg-coming">No legislation link is available in the current dataset.</p>';
 
-  function applySearch(query) {
-    const q = query.trim().toLowerCase();
-    searchClear.style.display = q ? 'block' : 'none';
-    paths.attr('fill', d => {
-      const name = d.properties.name;
-      const match = !q || name.toLowerCase().includes(q);
-      return getFill(name, !match);
+      panelInner.innerHTML =
+        '<h2 class="panel-country">' + escapeHtml(name) + '</h2>' +
+        '<div class="panel-tier-row">' +
+          '<span class="panel-tier-badge" style="background:' + color + '">' + tierLabel[s.tier] + '</span>' +
+          '<span class="panel-score">Composite ' + formatScore(s.composite) + '</span>' +
+        '</div>' +
+        '<p class="panel-section-title">Assessment by signal</p>' +
+        '<div class="panel-cats">' +
+          metricRows.map(row => cat(row[0], s[row[1]], row[2](s[row[1]]))).join("") +
+        '</div>' +
+        '<hr class="panel-divider">' +
+        '<p class="panel-section-title">Country detail</p>' +
+        renderVoteSection(s.tooltip && s.tooltip.vote) +
+        renderRatificationSection(s.tooltip && s.tooltip.ratification) +
+        renderLegislationSection(s.tooltip && s.tooltip.legislation, legHtml) +
+        renderCaveat(s.note);
+
+      panel.classList.add("open");
+      panel.setAttribute("aria-hidden", "false");
+      document.getElementById("panel-close").focus();
+    }
+
+    function cat(label, score, text) {
+      const pct = score === null || score === undefined ? 0 : Math.round(score * 100);
+      return '<div class="panel-cat">' +
+        '<div class="panel-cat-head">' +
+          '<div class="panel-cat-name">' + escapeHtml(label) + '</div>' +
+          '<div class="panel-cat-score">' + formatScore(score) + '</div>' +
+        '</div>' +
+        '<div class="track" aria-hidden="true"><span class="fill" style="width:' + pct + '%"></span></div>' +
+        '<div class="panel-cat-text">' + escapeHtml(text) + '</div>' +
+      '</div>';
+    }
+
+    function renderVoteSection(vote) {
+      if (!vote) {
+        return '<section class="detail-section"><h3 class="detail-title">1. Vote on Convention No. 193</h3><p class="detail-text">Vote detail is not available in the current handoff data.</p></section>';
+      }
+      return '<section class="detail-section"><h3 class="detail-title">1. Vote on Convention No. 193</h3>' +
+        '<ul class="detail-list">' +
+          vote.map(row => '<li><span>' + escapeHtml(row.label) + '</span><strong>' + row.yes + '/' + row.total + ' Total</strong></li>').join("") +
+        '</ul></section>';
+    }
+
+    function renderRatificationSection(ratification) {
+      const text = ratification && ratification.text
+        ? ratification.text
+        : 'ILO ratification-history detail is not available in the current handoff data.';
+      return '<section class="detail-section"><h3 class="detail-title">2. ILO Convention Ratification History</h3>' +
+        '<p class="detail-text">' + escapeHtml(text) + '</p></section>';
+    }
+
+    function renderLegislationSection(legislation, fallbackHtml) {
+      if (!legislation) {
+        return '<section class="detail-section"><h3 class="detail-title">3. Existing platform-work legislation</h3>' + fallbackHtml + '</section>';
+      }
+
+      const status = legislation.status ? '<p class="detail-meta">Status: ' + escapeHtml(legislation.status) + '</p>' : '';
+      const note = legislation.note ? '<p class="detail-note">' + escapeHtml(legislation.note) + '</p>' : '';
+      const body = legislation.type === 'link'
+        ? '<p class="detail-text"><a href="' + escapeHtml(legislation.url) + '" target="_blank" rel="noopener">' + escapeHtml(legislation.law) + '</a></p>'
+        : '<p class="detail-text">' + escapeHtml(legislation.text) + '</p>';
+
+      return '<section class="detail-section"><h3 class="detail-title">3. Existing platform-work legislation</h3>' +
+        body + status + note + '</section>';
+    }
+
+    function renderCaveat(note) {
+      if (!note) return '';
+      return '<section class="detail-section"><h3 class="detail-title">Interpretive caveat</h3><p class="detail-note">' + escapeHtml(note) + '</p></section>';
+    }
+
+    function closePanel() {
+      panel.classList.remove("open");
+      panel.setAttribute("aria-hidden", "true");
+    }
+
+    document.getElementById("panel-close").addEventListener("click", closePanel);
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closePanel();
     });
-  }
 
-  searchInput.addEventListener('input', () => applySearch(searchInput.value));
-  searchClear.addEventListener('click', () => {
-    searchInput.value = '';
-    applySearch('');
-    searchInput.focus();
+    svg.on("click", function(event) {
+      if (event.target.tagName === "svg") closePanel();
+    });
+
+    const searchInput = document.getElementById("search");
+    const searchClear = document.getElementById("search-clear");
+
+    function applySearch(query) {
+      const q = query.trim().toLowerCase();
+      let matches = 0;
+      searchClear.style.display = q ? "block" : "none";
+      paths.attr("fill", d => {
+        const name = d.properties.name;
+        const match = !q || name.toLowerCase().includes(q);
+        if (q && match && scores[name]) matches += 1;
+        return getFill(name, !match);
+      });
+      noResults.style.display = q && matches === 0 ? "block" : "none";
+    }
+
+    searchInput.addEventListener("input", () => applySearch(searchInput.value));
+    searchClear.addEventListener("click", () => {
+      searchInput.value = "";
+      applySearch("");
+      searchInput.focus();
+    });
+  } catch (error) {
+    map.innerHTML = '<div class="status">The map could not be loaded. Please check the data files and network connection.</div>';
+    console.error(error);
+  }
+}
+
+function renderSummary(scores, target) {
+  const counts = tierOrder.reduce((acc, tier) => {
+    acc[tier] = 0;
+    return acc;
+  }, {});
+
+  Object.values(scores).forEach(s => {
+    if (counts[s.tier] !== undefined) counts[s.tier] += 1;
   });
+
+  target.innerHTML = tierOrder.map(tier =>
+    '<div class="summary-item">' +
+      '<span class="summary-number" style="color:' + tierColor[tier] + '">' + counts[tier] + '</span>' +
+      '<span class="summary-label">' + tierLabel[tier] + '</span>' +
+    '</div>'
+  ).join("");
 }
 
 init();
