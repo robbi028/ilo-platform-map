@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Likelihood of ratifying ILO Convention No. 193 (Platform Economy)</title>
+<style>
+  body {
+    margin: 0;
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+  }
+  #wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 30px;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  .sub {
+    font-size: 13px;
+    color: #6b6b6b;
+    margin: 0 0 18px;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 14px;
+    font-size: 13px;
+  }
+  .legend span.dot {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    margin-right: 6px;
+    vertical-align: -2px;
+  }
+  #map {
+    width: 100%;
+  }
+  #map svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #tooltip {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    z-index: 10;
+    min-width: 160px;
+  }
+  .footer {
+    font-size: 11px;
+    color: #9a9a9a;
+    margin-top: 14px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h1>Likelihood of ratifying ILO Convention No. 193 (Platform Economy)</h1>
+  <p class="sub">Composite assessment based on ILC 114th Session vote record, ILO ratification history, existing domestic platform-worker legislation, and tripartite consensus</p>
+  <div class="legend">
+    <span><span class="dot" style="background:#2E9E44"></span>High likelihood</span>
+    <span><span class="dot" style="background:#E8C72E"></span>Some likelihood</span>
+    <span><span class="dot" style="background:#E8821E"></span>Low likelihood</span>
+    <span><span class="dot" style="background:#C0392B"></span>Very low likelihood</span>
+    <span><span class="dot" style="background:#F1EFE8;border:1px solid #ddd"></span>No data</span>
+  </div>
+  <div style="position: relative;">
+    <div id="map"></div>
+    <div id="tooltip"></div>
+  </div>
+  <div class="footer">
+    Sources: ILC 114th Session record vote (Adoption of the Decent Work in the Platform Economy Convention); ILO NORMLEX ratifications by country; CBR Platform Work Index 2025 (Bishop, Carter &amp; Deakin, Cambridge); World Bank "Regulation of platform-based work" report; direct legal research for countries not covered by other sources.<br>
+    132 of 141 voting countries shown — 9 small island/microstates (e.g. Malta, Singapore, Bahrain) are not rendered at this map resolution.
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+async function init() {
+  const scores = await fetch('scores.json').then(r => r.json());
+
+  function tierColor(tier) {
+    if (tier === 'High') return '#2E9E44';
+    if (tier === 'Moderate') return '#E8C72E';
+    if (tier === 'Low') return '#E8821E';
+    if (tier === 'Very Low') return '#C0392B';
+    return null;
+  }
+  const tierLabel = { High: 'High likelihood', Moderate: 'Some likelihood', Low: 'Low likelihood', 'Very Low': 'Very low likelihood' };
+  const noDataFill = '#F1EFE8';
+  const borderColor = '#ffffff';
+
+  const svg = d3.select('#map').append('svg').attr('viewBox', '0 0 960 500');
+  const path = d3.geoPath(d3.geoNaturalEarth1().scale(155).translate([480, 250]));
+  const tooltip = d3.select('#tooltip');
+
+  const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
+  const feats = topojson.feature(world, world.objects.countries).features;
+
+  svg.selectAll('path').data(feats).join('path')
+    .attr('d', path)
+    .attr('stroke', borderColor)
+    .attr('stroke-width', 0.5)
+    .attr('fill', d => {
+      const s = scores[d.properties.name];
+      return s ? tierColor(s.tier) : noDataFill;
+    })
+    .style('cursor', d => scores[d.properties.name] ? 'pointer' : 'default')
+    .on('mousemove', function(event, d) {
+      const s = scores[d.properties.name];
+      if (!s) { tooltip.style('display', 'none'); return; }
+      const rect = document.getElementById('map').getBoundingClientRect();
+      tooltip.style('display', 'block')
+        .style('left', (event.clientX - rect.left + 14) + 'px')
+        .style('top', (event.clientY - rect.top - 10) + 'px')
+        .html(
+          '<div style="font-weight:600;margin-bottom:2px">' + d.properties.name + '</div>' +
+          '<div style="color:#6b6b6b">' + tierLabel[s.tier] + '</div>'
+        );
+    })
+    .on('mouseleave', function() { tooltip.style('display', 'none'); });
+}
+init();
+</script>
+</body>
+</html>

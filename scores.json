@@ -1,0 +1,1058 @@
+{
+  "Australia": {
+    "composite": 1.0,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 1.0,
+    "c4": 1.0
+  },
+  "Colombia": {
+    "composite": 1.0,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 1.0,
+    "c4": 1.0
+  },
+  "Croatia": {
+    "composite": 1.0,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 1.0,
+    "c4": 1.0
+  },
+  "Greece": {
+    "composite": 1.0,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 1.0,
+    "c4": 1.0
+  },
+  "Italy": {
+    "composite": 1.0,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 1.0,
+    "c4": 1.0
+  },
+  "Mexico": {
+    "composite": 1.0,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 1.0,
+    "c4": 1.0
+  },
+  "Portugal": {
+    "composite": 1.0,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 1.0,
+    "c4": 1.0
+  },
+  "Belgium": {
+    "composite": 0.983,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 1.0,
+    "c4": 0.833
+  },
+  "Spain": {
+    "composite": 0.983,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 1.0,
+    "c4": 0.833
+  },
+  "France": {
+    "composite": 0.983,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 1.0,
+    "c4": 0.833
+  },
+  "Brazil": {
+    "composite": 0.9,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Ireland": {
+    "composite": 0.9,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Luxembourg": {
+    "composite": 0.9,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Norway": {
+    "composite": 0.9,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Netherlands": {
+    "composite": 0.9,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Switzerland": {
+    "composite": 0.9,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Egypt": {
+    "composite": 0.9,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Ecuador": {
+    "composite": 0.9,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Germany": {
+    "composite": 0.883,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 0.833
+  },
+  "Denmark": {
+    "composite": 0.883,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 0.833
+  },
+  "Peru": {
+    "composite": 0.883,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 0.833
+  },
+  "Sweden": {
+    "composite": 0.883,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 0.833
+  },
+  "Uruguay": {
+    "composite": 0.883,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 0.833
+  },
+  "Algeria": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Bulgaria": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Cyprus": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Djibouti": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Guinea": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Hungary": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Macedonia": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Morocco": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Montenegro": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Poland": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Slovakia": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Czechia": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Tunisia": {
+    "composite": 0.8,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Chile": {
+    "composite": 0.783,
+    "tier": "High",
+    "c1": 0.5,
+    "c2": 1.0,
+    "c3": 1.0,
+    "c4": 0.833
+  },
+  "Finland": {
+    "composite": 0.783,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 0.833
+  },
+  "Guatemala": {
+    "composite": 0.783,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 0.833
+  },
+  "Serbia": {
+    "composite": 0.783,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 0.833
+  },
+  "Slovenia": {
+    "composite": 0.783,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 0.833
+  },
+  "Canada": {
+    "composite": 0.75,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Estonia": {
+    "composite": 0.75,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Japan": {
+    "composite": 0.75,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Kenya": {
+    "composite": 0.75,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Philippines": {
+    "composite": 0.75,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Romania": {
+    "composite": 0.75,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Moldova": {
+    "composite": 0.75,
+    "tier": "High",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "South Korea": {
+    "composite": 0.717,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.5,
+    "c4": 0.667
+  },
+  "Argentina": {
+    "composite": 0.683,
+    "tier": "Moderate",
+    "c1": 0.5,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 0.833
+  },
+  "United Kingdom": {
+    "composite": 0.683,
+    "tier": "Moderate",
+    "c1": 0.5,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 0.833
+  },
+  "Ukraine": {
+    "composite": 0.667,
+    "tier": "Moderate",
+    "c1": null,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Albania": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Armenia": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Bahamas": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Burkina Faso": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Benin": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Cameroon": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "eSwatini": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Fiji": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Gabon": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Ghana": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Guyana": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Jamaica": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Latvia": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Lithuania": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Madagascar": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Malawi": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Mali": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Niger": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Uganda": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Pakistan": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Rwanda": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Syria": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Central African Rep.": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Dominican Rep.": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Tanzania": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Sierra Leone": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Sri Lanka": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Suriname": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Senegal": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Turkey": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Zambia": {
+    "composite": 0.65,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Austria": {
+    "composite": 0.633,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 0.833
+  },
+  "Dem. Rep. Congo": {
+    "composite": 0.617,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 0.667
+  },
+  "South Africa": {
+    "composite": 0.6,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "China": {
+    "composite": 0.6,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Iceland": {
+    "composite": 0.583,
+    "tier": "Moderate",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.5,
+    "c4": 0.833
+  },
+  "Israel": {
+    "composite": 0.583,
+    "tier": "Moderate",
+    "c1": null,
+    "c2": 0.5,
+    "c3": 0.5,
+    "c4": 1.0
+  },
+  "Russia": {
+    "composite": 0.575,
+    "tier": "Moderate",
+    "c1": 0.5,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 0.75
+  },
+  "Panama": {
+    "composite": 0.55,
+    "tier": "Moderate",
+    "c1": 0.5,
+    "c2": 1.0,
+    "c3": 0.0,
+    "c4": 0.5
+  },
+  "India": {
+    "composite": 0.533,
+    "tier": "Low",
+    "c1": 0.5,
+    "c2": 0.5,
+    "c3": 0.5,
+    "c4": 0.833
+  },
+  "Paraguay": {
+    "composite": 0.533,
+    "tier": "Low",
+    "c1": 0.5,
+    "c2": 0.5,
+    "c3": 0.5,
+    "c4": 0.833
+  },
+  "Saudi Arabia": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Botswana": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Brunei": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Cambodia": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Indonesia": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Iran": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Jordan": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Kuwait": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Lesotho": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Liberia": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Malaysia": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Mozambique": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Namibia": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Nepal": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Oman": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Uzbekistan": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Qatar": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Somalia": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Sudan": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "S. Sudan": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Timor-Leste": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Togo": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Trinidad and Tobago": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Zimbabwe": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "United Arab Emirates": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Ethiopia": {
+    "composite": 0.5,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Honduras": {
+    "composite": 0.483,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 0.833
+  },
+  "Thailand": {
+    "composite": 0.467,
+    "tier": "Low",
+    "c1": 1.0,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 0.667
+  },
+  "New Zealand": {
+    "composite": 0.45,
+    "tier": "Low",
+    "c1": 0.0,
+    "c2": 1.0,
+    "c3": 0.5,
+    "c4": 0.5
+  },
+  "Bangladesh": {
+    "composite": 0.417,
+    "tier": "Low",
+    "c1": 0.5,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 0.667
+  },
+  "Belarus": {
+    "composite": 0.417,
+    "tier": "Low",
+    "c1": null,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Costa Rica": {
+    "composite": 0.417,
+    "tier": "Low",
+    "c1": 0.5,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 0.667
+  },
+  "C\u00f4te d'Ivoire": {
+    "composite": 0.417,
+    "tier": "Low",
+    "c1": null,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "El Salvador": {
+    "composite": 0.417,
+    "tier": "Low",
+    "c1": null,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Kyrgyzstan": {
+    "composite": 0.417,
+    "tier": "Low",
+    "c1": null,
+    "c2": 0.5,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Libya": {
+    "composite": 0.25,
+    "tier": "Very Low",
+    "c1": 0.5,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 0.5
+  },
+  "Mongolia": {
+    "composite": 0.167,
+    "tier": "Very Low",
+    "c1": null,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "Laos": {
+    "composite": 0.167,
+    "tier": "Very Low",
+    "c1": null,
+    "c2": 0.0,
+    "c3": 0.0,
+    "c4": 1.0
+  },
+  "United States of America": {
+    "composite": 0.167,
+    "tier": "Very Low",
+    "c1": 0.0,
+    "c2": 0.0,
+    "c3": 0.5,
+    "c4": 0.667
+  }
+}
