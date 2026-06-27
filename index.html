@@ -201,6 +201,20 @@
     background: #fff;
   }
 
+  .map-hint {
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    z-index: 2;
+    padding: 7px 9px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--muted);
+    font-size: 12px;
+    box-shadow: 0 4px 12px rgba(24, 38, 50, 0.06);
+  }
+
   #map {
     width: 100%;
     min-height: 320px;
@@ -345,6 +359,11 @@
   }
 
   #panel.open { transform: translateX(0); }
+
+  #panel::before {
+    content: "";
+    display: none;
+  }
 
   .panel-inner {
     padding: 28px 24px 40px;
@@ -629,6 +648,44 @@
     #wrap { padding: 22px 16px 26px; }
     .search-row { justify-content: stretch; }
     h1 { font-size: 23px; }
+    .sub { max-width: none; }
+    .map-shell {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    #map {
+      min-width: 760px;
+      min-height: 420px;
+    }
+    #panel {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: min(82vh, 720px);
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 -12px 34px rgba(19, 30, 40, 0.22);
+      transform: translateY(100%);
+    }
+    #panel.open {
+      transform: translateY(0);
+    }
+    #panel::before {
+      display: block;
+      width: 42px;
+      height: 4px;
+      margin: 10px auto 0;
+      border-radius: 999px;
+      background: #cbd3d8;
+    }
+    .panel-inner {
+      padding: 20px 18px 34px;
+    }
+    .panel-close {
+      top: 16px;
+      right: 16px;
+    }
   }
 
   @media (max-width: 520px) {
@@ -662,6 +719,7 @@
   </div>
 
   <div class="map-shell">
+    <div class="map-hint">Tap a country for details. Drag sideways to pan on mobile.</div>
     <div id="map"><div class="status">Loading map data...</div></div>
     <div id="tooltip"></div>
     <div class="no-results" id="no-results">No matching countries in the displayed dataset.</div>
@@ -872,8 +930,8 @@ async function init() {
       .attr("stroke", borderColor)
       .attr("stroke-width", 0.55)
       .attr("fill", d => getFill(d.properties.name, false))
-      .attr("tabindex", d => scores[d.properties.name] ? 0 : null)
-      .attr("role", d => scores[d.properties.name] ? "button" : null)
+      .attr("tabindex", 0)
+      .attr("role", "button")
       .attr("aria-label", d => {
         const s = scores[d.properties.name];
         return s ? d.properties.name + ", " + tierLabel[s.tier] : d.properties.name + ", no data. " + noDataReason(d.properties.name);
@@ -907,15 +965,21 @@ async function init() {
       .on("mouseleave blur", () => tooltip.style("display", "none"))
       .on("click", function(event, d) {
         const s = scores[d.properties.name];
-        if (!s) return;
         tooltip.style("display", "none");
+        if (!s) {
+          openNoDataPanel(d.properties.name);
+          return;
+        }
         openPanel(d.properties.name, s);
       })
       .on("keydown", function(event, d) {
         if (event.key !== "Enter" && event.key !== " ") return;
         const s = scores[d.properties.name];
-        if (!s) return;
         event.preventDefault();
+        if (!s) {
+          openNoDataPanel(d.properties.name);
+          return;
+        }
         openPanel(d.properties.name, s);
       });
 
@@ -935,6 +999,22 @@ async function init() {
         renderRatificationSection(s.tooltip && s.tooltip.ratification) +
         renderLegislationSection(s.tooltip && s.tooltip.legislation, legHtml) +
         renderCaveat(s.note);
+
+      panel.classList.add("open");
+      panel.setAttribute("aria-hidden", "false");
+      document.getElementById("panel-close").focus();
+    }
+
+    function openNoDataPanel(name) {
+      panelInner.innerHTML =
+        '<h2 class="panel-country">' + escapeHtml(name) + '</h2>' +
+        '<div class="panel-tier-row">' +
+          '<span class="panel-tier-badge" style="background:#c5cdd2;color:#1d2329">No data</span>' +
+        '</div>' +
+        '<section class="detail-section">' +
+          '<h3 class="detail-title">Why this area is greyed out</h3>' +
+          '<p class="detail-text">' + escapeHtml(noDataReason(name)) + '</p>' +
+        '</section>';
 
       panel.classList.add("open");
       panel.setAttribute("aria-hidden", "false");
