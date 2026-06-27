@@ -16,16 +16,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -60,16 +66,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -104,16 +116,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -148,16 +166,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -192,16 +216,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -236,16 +266,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -280,16 +316,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -324,16 +366,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -368,16 +416,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -412,16 +466,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -456,16 +516,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -499,16 +565,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -543,16 +615,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -587,16 +665,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -631,16 +715,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -675,16 +765,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -719,16 +815,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -763,16 +865,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -807,16 +915,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -851,16 +965,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -895,16 +1015,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -939,16 +1065,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -983,16 +1115,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1027,16 +1165,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1071,16 +1215,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 1,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1115,16 +1265,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -1158,16 +1314,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1201,16 +1363,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -1244,16 +1412,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -1287,16 +1461,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1330,16 +1510,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1373,16 +1559,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -1416,16 +1608,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1459,16 +1657,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -1502,16 +1706,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1545,16 +1755,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1588,16 +1804,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1631,16 +1853,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1674,16 +1902,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1718,16 +1952,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1761,16 +2001,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1804,16 +2050,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1847,16 +2099,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1890,16 +2148,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1934,16 +2198,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -1978,16 +2248,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2022,16 +2298,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2066,16 +2348,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2110,16 +2398,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2154,16 +2448,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2198,16 +2498,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 1,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2242,16 +2548,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2286,16 +2598,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 2,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2329,16 +2647,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 2,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2373,16 +2697,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -2416,16 +2746,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -2459,16 +2795,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -2502,16 +2844,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -2545,16 +2893,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2588,16 +2942,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -2631,16 +2991,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2674,16 +3040,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2717,16 +3089,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2760,16 +3138,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2803,16 +3187,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -2846,16 +3236,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2889,16 +3285,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -2932,16 +3334,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -2975,16 +3383,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3018,16 +3432,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3061,16 +3481,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3104,16 +3530,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3147,16 +3579,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3190,16 +3628,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3233,16 +3677,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -3276,16 +3726,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3319,16 +3775,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3362,16 +3824,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3405,16 +3873,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3448,16 +3922,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3491,16 +3971,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3534,16 +4020,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3577,16 +4069,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -3620,16 +4118,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3663,16 +4167,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3706,16 +4216,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3749,16 +4265,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3792,16 +4314,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3835,16 +4363,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3878,16 +4412,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 1,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3921,16 +4461,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -3965,16 +4511,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4009,16 +4561,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4053,16 +4611,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4097,16 +4661,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4140,16 +4710,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 2,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -4183,16 +4759,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4227,16 +4809,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 2,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4271,16 +4859,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4314,16 +4908,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -4357,16 +4957,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4400,16 +5006,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4443,16 +5055,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4486,16 +5104,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4529,16 +5153,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4572,16 +5202,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4615,16 +5251,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -4658,16 +5300,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -4701,16 +5349,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4744,16 +5398,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -4787,16 +5447,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4830,16 +5496,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4873,16 +5545,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -4916,16 +5594,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -4959,16 +5643,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5002,16 +5692,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -5045,16 +5741,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5088,16 +5790,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5131,16 +5839,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -5174,16 +5888,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5217,16 +5937,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5260,16 +5986,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -5303,16 +6035,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5346,16 +6084,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5389,16 +6133,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5432,16 +6182,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5475,16 +6231,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -5518,16 +6280,22 @@
         {
           "label": "Government delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5561,16 +6329,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5604,16 +6378,22 @@
         {
           "label": "Government delegates",
           "yes": 2,
+          "no": 0,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 1,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5647,16 +6427,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 2,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5691,16 +6477,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 2,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         }
       ],
@@ -5734,16 +6526,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5777,16 +6575,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 2,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 1,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5820,16 +6624,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -5863,16 +6673,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -5906,16 +6722,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -5949,16 +6771,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 2,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -5992,16 +6820,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Employer delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
@@ -6035,16 +6869,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 0,
+          "no": 0,
+          "abstain": 0,
           "total": 0
         }
       ],
@@ -6078,16 +6918,22 @@
         {
           "label": "Government delegates",
           "yes": 0,
+          "no": 2,
+          "abstain": 0,
           "total": 2
         },
         {
           "label": "Employer delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         },
         {
           "label": "Worker delegates",
           "yes": 1,
+          "no": 0,
+          "abstain": 0,
           "total": 1
         }
       ],
