@@ -35,7 +35,45 @@
   }
 
   .topbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 22px;
+    align-items: start;
     margin-bottom: 18px;
+  }
+
+  .author-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    color: #53616c;
+    font-size: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .author-link:hover,
+  .author-link:focus-visible {
+    color: #0a66c2;
+    border-color: #b7c8d8;
+    outline: none;
+  }
+
+  .author-in {
+    display: inline-grid;
+    place-items: center;
+    width: 17px;
+    height: 17px;
+    border-radius: 4px;
+    background: #0a66c2;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
   }
 
   h1 {
@@ -58,6 +96,13 @@
     display: grid;
     grid-template-columns: repeat(4, 86px);
     gap: 8px;
+  }
+
+  .sub a,
+  .notes a,
+  .panel-link {
+    color: #0f5d90;
+    font-weight: 600;
   }
 
   .summary-item {
@@ -470,6 +515,30 @@
     margin: 0 0 8px;
   }
 
+  .detail-title-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+
+  .detail-title-row .detail-title {
+    margin: 0;
+  }
+
+  .panel-link {
+    font-size: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .panel-link:hover,
+  .panel-link:focus-visible {
+    text-decoration: underline;
+    outline: none;
+  }
+
   .detail-list {
     display: grid;
     gap: 5px;
@@ -636,6 +705,13 @@
 
   @media (max-width: 820px) {
     #wrap { padding: 22px 16px 26px; }
+    .topbar {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .author-link {
+      width: fit-content;
+    }
     .controls {
       grid-template-columns: 1fr;
       gap: 10px;
@@ -701,9 +777,13 @@
   <header class="topbar">
     <div>
       <h1>ILO Platform Economy Ratification Outlook</h1>
-      <p class="sub">Country-by-country estimates of the likelihood that each country will ratify the adopted Decent Work in the Platform Economy Convention, based on voting behavior during the ILO negotiations, alignment among government, employer, and worker representatives, each country's history of ratifying ILO conventions, and the status of its domestic platform work laws. These tiers reflect my independent assessment. They are intended to guide research and discussion, not predict with certainty whether a country will ratify the Convention.</p>
+      <p class="sub">Country-by-country estimates of the likelihood that each country will ratify the adopted <a href="https://www.ilo.org/resource/record-decisions/convention-concerning-decent-work-platform-economy-2026" target="_blank" rel="noopener">Decent Work in the Platform Economy Convention</a>, based on voting behavior during the ILO negotiations, alignment among government, employer, and worker representatives, each country's history of ratifying ILO conventions, and the status of its domestic platform work laws. These tiers reflect my independent assessment. They are intended to guide research and discussion, not predict with certainty whether a country will ratify the Convention.</p>
       <div class="updated">Last updated: June 27, 2026</div>
     </div>
+    <a class="author-link" href="https://www.linkedin.com/in/pbshapiro/" target="_blank" rel="noopener">
+      <span>Created by Patty Shapiro</span>
+      <span class="author-in" aria-hidden="true">in</span>
+    </a>
   </header>
 
   <div class="controls">
@@ -726,7 +806,7 @@
   </div>
 
   <section class="notes">
-    <p>Sources: ILC 114th Session record vote on the Decent Work in the Platform Economy Convention; ILO NORMLEX ratifications by country; CBR Platform Work Index 2025; World Bank research on regulation of platform-based work; and other available online sources. 132 of 141 voting countries are shown; several small island states and microstates are not rendered at this map resolution.</p>
+    <p>Sources: ILC 114th Session record vote on the <a href="https://www.ilo.org/resource/record-decisions/convention-concerning-decent-work-platform-economy-2026" target="_blank" rel="noopener">Decent Work in the Platform Economy Convention</a>; ILO NORMLEX ratifications by country; CBR Platform Work Index 2025; World Bank research on regulation of platform-based work; and other available online sources. 132 of 141 voting countries are shown; several small island states and microstates are not rendered at this map resolution.</p>
   </section>
 
   <div class="footer">
@@ -951,7 +1031,6 @@ async function init() {
             .style("top", Math.max(12, y) + "px")
             .html(
               '<div class="tt-name">' + escapeHtml(d.properties.name) + '</div>' +
-              '<div class="tt-tier">No data</div>' +
               '<div class="tt-hint">' + escapeHtml(noDataReason(d.properties.name)) + '</div>'
             );
           return;
@@ -999,7 +1078,7 @@ async function init() {
         '</div>' +
         '<p class="panel-section-title">Country detail</p>' +
         renderVoteSection(s.tooltip && s.tooltip.vote) +
-        renderRatificationSection(s.tooltip && s.tooltip.ratification) +
+        renderRatificationSection(name, s.tooltip && s.tooltip.ratification) +
         renderLegislationSection(s.tooltip && s.tooltip.legislation, legHtml) +
         renderCaveat(s.note);
 
@@ -1040,7 +1119,11 @@ async function init() {
       if (!vote) {
         return '<section class="detail-section"><h3 class="detail-title">Vote on Convention No. 193</h3><p class="detail-text">Vote detail is not available in the current handoff data.</p></section>';
       }
-      return '<section class="detail-section"><h3 class="detail-title">Vote on Convention No. 193</h3>' +
+      return '<section class="detail-section">' +
+        '<div class="detail-title-row">' +
+          '<h3 class="detail-title">Vote on Convention No. 193</h3>' +
+          '<a class="panel-link" href="https://www.ilo.org/resource/conference-paper/ilc/ilc114/results-vote-adoption-decent-work-platform-economy-convention-2026" target="_blank" rel="noopener">Voting record</a>' +
+        '</div>' +
         '<div class="vote-cards">' + vote.map(renderVoteCard).join("") + '</div></section>';
     }
 
@@ -1079,12 +1162,15 @@ async function init() {
       return yes + ' yes / ' + no + ' no / ' + abstain + ' abstained';
     }
 
-    function renderRatificationSection(ratification) {
-      const text = ratification && ratification.text
-        ? ratification.text
-        : 'ILO ratification-history detail is not available in the current handoff data.';
-      const joined = ratification && ratification.member_since ? ' (joined ' + escapeHtml(joinedYear(ratification.member_since)) + ')' : '';
+    function renderRatificationSection(name, ratification) {
+      const joinedDate = ratification && ratification.member_since ? formatDateText(ratification.member_since) : '';
       const ratified = ratification && Number.isFinite(Number(ratification.ratified)) ? Number(ratification.ratified) : null;
+      const text = ratified === null
+        ? 'ILO ratification-history detail is not available in the current handoff data.'
+        : joinedDate
+          ? name + ' has been an ILO member since ' + joinedDate + ' and has ratified ' + ratified + ' of the 193 ILO conventions adopted to date.'
+          : name + ' has ratified ' + ratified + ' of the 193 ILO conventions adopted to date.';
+      const joined = joinedDate ? ' (joined ' + escapeHtml(joinedDate) + ')' : '';
       const pct = ratified === null ? 0 : Math.max(0, Math.min(100, (ratified / 193) * 100));
       const bar = ratified === null ? '' :
         '<div class="ratification-head"><span>Ratified conventions</span><strong>' + ratified + ' of 193</strong></div>' +
@@ -1102,24 +1188,79 @@ async function init() {
         return '<section class="detail-section"><h3 class="detail-title">Existing platform-work legislation</h3>' + fallbackHtml + '</section>';
       }
 
-      const status = legislation.status ? '<p class="detail-meta">Status: ' + escapeHtml(legislation.status) + '</p>' : '';
-      const note = legislation.note ? '<p class="detail-note">' + escapeHtml(legislation.note) + '</p>' : '';
+      const statusText = cleanDisplayText(legislation.status || '');
+      const noteText = cleanDisplayText(legislation.note || '');
+      const status = shouldShowStatus(statusText) ? '<p class="detail-meta">Status: ' + escapeHtml(statusText) + '</p>' : '';
+      const note = noteText ? '<p class="detail-note">' + escapeHtml(noteText) + '</p>' : '';
       const body = legislation.type === 'link'
-        ? '<p class="detail-text"><a href="' + escapeHtml(legislation.url) + '" target="_blank" rel="noopener">' + escapeHtml(legislation.law) + '</a></p>'
-        : '<p class="detail-text">' + escapeHtml(legislation.text) + '</p>';
+        ? '<p class="detail-text"><a href="' + escapeHtml(legislation.url) + '" target="_blank" rel="noopener">' + escapeHtml(cleanDisplayText(legislation.law || 'Official source')) + '</a></p>'
+        : '<p class="detail-text">' + escapeHtml(cleanDisplayText(legislation.text || '')) + '</p>';
 
       return '<section class="detail-section"><h3 class="detail-title">Existing platform-work legislation</h3>' +
         body + status + note + '</section>';
     }
 
-    function joinedYear(dateText) {
-      const match = String(dateText).match(/\b(19|20)\d{2}\b/);
-      return match ? match[0] : dateText;
+    function formatDateText(dateText) {
+      const text = String(dateText);
+      const match = text.match(/\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b/);
+      if (!match) return text;
+      const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+      const day = Number(match[1]);
+      const month = monthNames[Number(match[2]) - 1];
+      const formatted = month ? month + ' ' + day + ', ' + match[3] : match[0];
+      return text.replace(match[0], formatted);
+    }
+
+    function cleanDisplayText(text) {
+      return formatDisplayDates(String(text)
+        .replace(/^Upgrade candidate:\s*/i, '')
+        .replace(/^Status:\s*/i, '')
+        .trim());
+    }
+
+    function formatDisplayDates(text) {
+      const months = {
+        jan: 'January', january: 'January',
+        feb: 'February', february: 'February',
+        mar: 'March', march: 'March',
+        apr: 'April', april: 'April',
+        may: 'May',
+        jun: 'June', june: 'June',
+        jul: 'July', july: 'July',
+        aug: 'August', august: 'August',
+        sep: 'September', sept: 'September', september: 'September',
+        oct: 'October', october: 'October',
+        nov: 'November', november: 'November',
+        dec: 'December', december: 'December'
+      };
+      const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+      return text
+        .replace(/\b(\d{1,2})[./](\d{1,2})[./](\d{4})\b/g, (_, day, month, year) => {
+          const name = monthNames[Number(month) - 1] || month;
+          return name + ' ' + Number(day) + ', ' + year;
+        })
+        .replace(/\b(\d{1,2})\s+(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t|tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{4})\b/gi, (_, day, month, year) => {
+          return months[month.toLowerCase()] + ' ' + Number(day) + ', ' + year;
+        })
+        .replace(/\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t|tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2}),\s*(\d{4})\b/gi, (_, month, day, year) => {
+          return months[month.toLowerCase()] + ' ' + Number(day) + ', ' + year;
+        });
+    }
+
+    function shouldShowStatus(statusText) {
+      return statusText && !/^direct verification\b/i.test(statusText);
     }
 
     function renderCaveat(note) {
-      if (!note) return '';
-      return '<section class="detail-section"><h3 class="detail-title">Interpretive caveat</h3><p class="detail-note">' + escapeHtml(note) + '</p></section>';
+      const cleaned = cleanDisplayText(note || '');
+      if (!cleaned) return '';
+      return '<section class="detail-section"><h3 class="detail-title">Interpretive caveat</h3><p class="detail-note">' + escapeHtml(cleaned) + '</p></section>';
     }
 
     function closePanel() {
