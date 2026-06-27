@@ -42,6 +42,43 @@
     margin-right: 6px;
     vertical-align: -2px;
   }
+
+  /* Search */
+  .search-wrap {
+    margin-bottom: 12px;
+    position: relative;
+    max-width: 280px;
+  }
+  .search-wrap input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 30px 7px 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+    color: #1a1a1a;
+  }
+  .search-wrap input:focus {
+    border-color: #888;
+  }
+  .search-clear {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    font-size: 16px;
+    line-height: 1;
+    display: none;
+    padding: 0;
+  }
+  .search-clear:hover { color: #444; }
+
   #map {
     width: 100%;
   }
@@ -57,17 +94,169 @@
     background: #ffffff;
     border: 1px solid #d9d9d9;
     border-radius: 8px;
-    padding: 8px 10px;
+    padding: 10px 12px;
     font-size: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     z-index: 10;
-    min-width: 160px;
+    min-width: 200px;
+    max-width: 260px;
   }
+  .tt-name {
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 13px;
+  }
+  .tt-tier {
+    color: #6b6b6b;
+    margin-bottom: 8px;
+  }
+  .tt-cats {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .tt-cat {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 6px;
+    line-height: 1.4;
+  }
+  .tt-cat-label {
+    color: #aaa;
+    font-size: 11px;
+    padding-top: 1px;
+  }
+  .tt-cat-val {
+    color: #1a1a1a;
+  }
+  .tt-hint {
+    margin-top: 8px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 6px;
+    color: #bbb;
+    font-size: 11px;
+  }
+
+  /* Side panel */
+  #panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.10);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    z-index: 100;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  #panel.open {
+    transform: translateX(0);
+  }
+  .panel-inner {
+    padding: 28px 24px 40px;
+  }
+  .panel-close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+    line-height: 1;
+    padding: 4px;
+  }
+  .panel-close:hover { color: #1a1a1a; }
+  .panel-country {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    padding-right: 28px;
+  }
+  .panel-tier-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 22px;
+  }
+  .panel-section-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #999;
+    margin: 0 0 10px;
+  }
+  .panel-cats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .panel-cat {
+    background: #f7f7f5;
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .panel-cat-name {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #999;
+    margin-bottom: 3px;
+  }
+  .panel-cat-text {
+    font-size: 13px;
+    color: #1a1a1a;
+    line-height: 1.45;
+  }
+  .panel-divider {
+    border: none;
+    border-top: 1px solid #efefef;
+    margin: 20px 0;
+  }
+  .panel-leg-btn {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 8px 16px;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .panel-leg-btn:hover { background: #333; }
+  .panel-leg-coming {
+    font-size: 12px;
+    color: #bbb;
+    font-style: italic;
+    margin: 4px 0 0;
+  }
+
   .footer {
     font-size: 11px;
     color: #9a9a9a;
     margin-top: 14px;
     line-height: 1.5;
+  }
+  .disclaimer {
+    font-size: 11px;
+    color: #b0b0b0;
+    margin-top: 10px;
+    line-height: 1.5;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
   }
 </style>
 </head>
@@ -82,48 +271,109 @@
     <span><span class="dot" style="background:#C0392B"></span>Very low likelihood</span>
     <span><span class="dot" style="background:#F1EFE8;border:1px solid #ddd"></span>No data</span>
   </div>
+
+  <div class="search-wrap">
+    <input type="text" id="search" placeholder="Search for a country…" autocomplete="off">
+    <button class="search-clear" id="search-clear" title="Clear">✕</button>
+  </div>
+
   <div style="position: relative;">
     <div id="map"></div>
     <div id="tooltip"></div>
   </div>
+
   <div class="footer">
     Sources: ILC 114th Session record vote (Adoption of the Decent Work in the Platform Economy Convention); ILO NORMLEX ratifications by country; CBR Platform Work Index 2025 (Bishop, Carter &amp; Deakin, Cambridge); World Bank "Regulation of platform-based work" report; direct legal research for countries not covered by other sources.<br>
     132 of 141 voting countries shown — 9 small island/microstates (e.g. Malta, Singapore, Bahrain) are not rendered at this map resolution.
   </div>
+  <div class="disclaimer">
+    <strong>AI-generated content.</strong> This visualization was produced with AI assistance. Data may be incomplete or contain errors. It is provided for informational and research purposes only and does not constitute legal advice. Nothing on this page should be relied upon as a substitute for qualified legal counsel.
+  </div>
+</div>
+
+<!-- Side panel -->
+<div id="panel">
+  <button class="panel-close" id="panel-close">✕</button>
+  <div class="panel-inner" id="panel-inner"></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <script>
+// ── Plain-language mappings ───────────────────────────────────────────────────
+
+function c1Text(v) {
+  if (v === null || v === undefined) return 'Did not participate in the vote (non-member or absent)';
+  if (v >= 1.0) return 'Voted in favor of adoption at the ILC 114th Session';
+  if (v >= 0.5) return 'Abstained or was not present for the vote';
+  return 'Voted against adoption at the ILC 114th Session';
+}
+
+function c2Text(v) {
+  if (v === null || v === undefined) return 'Insufficient data on ratification history';
+  if (v >= 1.0) return 'Strong track record of ratifying ILO conventions';
+  if (v >= 0.5) return 'Moderate history of ratifying ILO conventions';
+  return 'Limited history of ratifying ILO conventions';
+}
+
+function c3Text(v) {
+  if (v === null || v === undefined) return 'No data on domestic legislation';
+  if (v >= 1.0) return 'Has enacted dedicated platform-work legislation';
+  if (v >= 0.5) return 'Legislation in progress or partially in place';
+  return 'No dedicated platform-work legislation identified';
+}
+
+function c4Text(v) {
+  if (v === null || v === undefined) return 'Insufficient tripartite data';
+  if (v >= 0.9) return 'Strong tripartite consensus in support of ratification';
+  if (v >= 0.75) return 'Broadly supportive tripartite environment';
+  if (v >= 0.55) return 'Mixed tripartite signals';
+  return 'Limited or weak tripartite alignment';
+}
+
+const tierLabel = {
+  High: 'High likelihood',
+  Moderate: 'Some likelihood',
+  Low: 'Low likelihood',
+  'Very Low': 'Very low likelihood'
+};
+
+const tierColor = {
+  High: '#2E9E44',
+  Moderate: '#E8C72E',
+  Low: '#E8821E',
+  'Very Low': '#C0392B'
+};
+
+const noDataFill = '#F1EFE8';
+const borderColor = '#ffffff';
+const dimFill = '#dedad2';
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+
 async function init() {
   const scores = await fetch('scores.json').then(r => r.json());
-
-  function tierColor(tier) {
-    if (tier === 'High') return '#2E9E44';
-    if (tier === 'Moderate') return '#E8C72E';
-    if (tier === 'Low') return '#E8821E';
-    if (tier === 'Very Low') return '#C0392B';
-    return null;
-  }
-  const tierLabel = { High: 'High likelihood', Moderate: 'Some likelihood', Low: 'Low likelihood', 'Very Low': 'Very low likelihood' };
-  const noDataFill = '#F1EFE8';
-  const borderColor = '#ffffff';
 
   const svg = d3.select('#map').append('svg').attr('viewBox', '0 0 960 500');
   const path = d3.geoPath(d3.geoNaturalEarth1().scale(155).translate([480, 250]));
   const tooltip = d3.select('#tooltip');
+  const panel = document.getElementById('panel');
+  const panelInner = document.getElementById('panel-inner');
 
   const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
   const feats = topojson.feature(world, world.objects.countries).features;
 
-  svg.selectAll('path').data(feats).join('path')
+  function getFill(name, dimmed) {
+    if (dimmed) return dimFill;
+    const s = scores[name];
+    return s ? (tierColor[s.tier] || noDataFill) : noDataFill;
+  }
+
+  const paths = svg.selectAll('path').data(feats).join('path')
     .attr('d', path)
     .attr('stroke', borderColor)
     .attr('stroke-width', 0.5)
-    .attr('fill', d => {
-      const s = scores[d.properties.name];
-      return s ? tierColor(s.tier) : noDataFill;
-    })
+    .attr('fill', d => getFill(d.properties.name, false))
     .style('cursor', d => scores[d.properties.name] ? 'pointer' : 'default')
     .on('mousemove', function(event, d) {
       const s = scores[d.properties.name];
@@ -131,14 +381,84 @@ async function init() {
       const rect = document.getElementById('map').getBoundingClientRect();
       tooltip.style('display', 'block')
         .style('left', (event.clientX - rect.left + 14) + 'px')
-        .style('top', (event.clientY - rect.top - 10) + 'px')
+        .style('top',  (event.clientY - rect.top  - 10) + 'px')
         .html(
-          '<div style="font-weight:600;margin-bottom:2px">' + d.properties.name + '</div>' +
-          '<div style="color:#6b6b6b">' + tierLabel[s.tier] + '</div>'
+          '<div class="tt-name">' + d.properties.name + '</div>' +
+          '<div class="tt-tier">' + tierLabel[s.tier] + '</div>' +
+          '<div class="tt-cats">' +
+            '<div class="tt-cat"><span class="tt-cat-label">Vote</span><span class="tt-cat-val">' + c1Text(s.c1) + '</span></div>' +
+            '<div class="tt-cat"><span class="tt-cat-label">Ratification</span><span class="tt-cat-val">' + c2Text(s.c2) + '</span></div>' +
+            '<div class="tt-cat"><span class="tt-cat-label">Legislation</span><span class="tt-cat-val">' + c3Text(s.c3) + '</span></div>' +
+            '<div class="tt-cat"><span class="tt-cat-label">Tripartite</span><span class="tt-cat-val">' + c4Text(s.c4) + '</span></div>' +
+          '</div>' +
+          '<div class="tt-hint">Click for full detail</div>'
         );
     })
-    .on('mouseleave', function() { tooltip.style('display', 'none'); });
+    .on('mouseleave', () => tooltip.style('display', 'none'))
+    .on('click', function(event, d) {
+      const s = scores[d.properties.name];
+      if (!s) return;
+      tooltip.style('display', 'none');
+      openPanel(d.properties.name, s);
+    });
+
+  // ── Panel ─────────────────────────────────────────────────────────────────
+  function openPanel(name, s) {
+    const color = tierColor[s.tier] || '#999';
+    const legHtml = s.legislation_url
+      ? '<a class="panel-leg-btn" href="' + s.legislation_url + '" target="_blank" rel="noopener">View legislation →</a>'
+      : '<p class="panel-leg-coming">Links to legislation will be added shortly.</p>';
+
+    panelInner.innerHTML =
+      '<h2 class="panel-country">' + name + '</h2>' +
+      '<span class="panel-tier-badge" style="background:' + color + '">' + tierLabel[s.tier] + '</span>' +
+      '<p class="panel-section-title">Assessment by category</p>' +
+      '<div class="panel-cats">' +
+        cat('ILC 114th Session vote', c1Text(s.c1)) +
+        cat('ILO ratification history', c2Text(s.c2)) +
+        cat('Platform-work legislation', c3Text(s.c3)) +
+        cat('Tripartite consensus', c4Text(s.c4)) +
+      '</div>' +
+      '<hr class="panel-divider">' +
+      '<p class="panel-section-title">Platform-work legislation</p>' +
+      legHtml;
+
+    panel.classList.add('open');
+  }
+
+  function cat(label, text) {
+    return '<div class="panel-cat"><div class="panel-cat-name">' + label + '</div><div class="panel-cat-text">' + text + '</div></div>';
+  }
+
+  document.getElementById('panel-close').addEventListener('click', () => panel.classList.remove('open'));
+
+  // Close panel on map background click
+  svg.on('click', function(event) {
+    if (event.target.tagName === 'svg') panel.classList.remove('open');
+  });
+
+  // ── Search ────────────────────────────────────────────────────────────────
+  const searchInput = document.getElementById('search');
+  const searchClear  = document.getElementById('search-clear');
+
+  function applySearch(query) {
+    const q = query.trim().toLowerCase();
+    searchClear.style.display = q ? 'block' : 'none';
+    paths.attr('fill', d => {
+      const name = d.properties.name;
+      const match = !q || name.toLowerCase().includes(q);
+      return getFill(name, !match);
+    });
+  }
+
+  searchInput.addEventListener('input', () => applySearch(searchInput.value));
+  searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    applySearch('');
+    searchInput.focus();
+  });
 }
+
 init();
 </script>
 </body>
