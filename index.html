@@ -69,6 +69,22 @@
     border-radius: 8px;
     background: #fff;
     padding: 10px;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  }
+
+  .summary-item:hover,
+  .summary-item:focus-visible {
+    border-color: #8b9ba7;
+    box-shadow: 0 4px 14px rgba(24, 38, 50, 0.10);
+    outline: none;
+  }
+
+  .summary-item.active {
+    border-color: var(--tier-color);
+    box-shadow: 0 0 0 3px rgba(22, 138, 74, 0.18);
   }
 
   .summary-number {
@@ -710,6 +726,7 @@ async function init() {
     const tooltip = d3.select("#tooltip");
     const panel = document.getElementById("panel");
     const panelInner = document.getElementById("panel-inner");
+    let activeTier = "";
 
     const world = await d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");
     const feats = topojson.feature(world, world.objects.countries).features;
@@ -718,6 +735,13 @@ async function init() {
       if (dimmed) return dimFill;
       const s = scores[name];
       return s ? (tierColor[s.tier] || noDataFill) : noDataFill;
+    }
+
+    function shouldDim(name, query) {
+      const s = scores[name];
+      const searchMatch = !query || name.toLowerCase().includes(query);
+      const tierMatch = !activeTier || (s && s.tier === activeTier);
+      return !(searchMatch && tierMatch);
     }
 
     const paths = svg.selectAll("path").data(feats).join("path")
@@ -862,24 +886,32 @@ async function init() {
     const searchInput = document.getElementById("search");
     const searchClear = document.getElementById("search-clear");
 
-    function applySearch(query) {
-      const q = query.trim().toLowerCase();
+    function applyFilters() {
+      const q = searchInput.value.trim().toLowerCase();
       let matches = 0;
       searchClear.style.display = q ? "block" : "none";
       paths.attr("fill", d => {
         const name = d.properties.name;
-        const match = !q || name.toLowerCase().includes(q);
-        if (q && match) matches += 1;
-        return getFill(name, !match);
+        const dimmed = shouldDim(name, q);
+        if ((q || activeTier) && !dimmed) matches += 1;
+        return getFill(name, dimmed);
       });
-      noResults.style.display = q && matches === 0 ? "block" : "none";
+      noResults.style.display = (q || activeTier) && matches === 0 ? "block" : "none";
+      updateSummaryState(summary, activeTier);
     }
 
-    searchInput.addEventListener("input", () => applySearch(searchInput.value));
+    searchInput.addEventListener("input", applyFilters);
     searchClear.addEventListener("click", () => {
       searchInput.value = "";
-      applySearch("");
+      applyFilters();
       searchInput.focus();
+    });
+
+    summary.addEventListener("click", event => {
+      const card = event.target.closest(".summary-item");
+      if (!card) return;
+      activeTier = activeTier === card.dataset.tier ? "" : card.dataset.tier;
+      applyFilters();
     });
   } catch (error) {
     map.innerHTML = '<div class="status">The map could not be loaded. Please check the data files and network connection.</div>';
@@ -898,11 +930,19 @@ function renderSummary(scores, target) {
   });
 
   target.innerHTML = tierOrder.map(tier =>
-    '<div class="summary-item">' +
+    '<button class="summary-item" type="button" data-tier="' + tier + '" aria-pressed="false" style="--tier-color:' + tierColor[tier] + '">' +
       '<span class="summary-number" style="color:' + tierColor[tier] + '">' + counts[tier] + '</span>' +
       '<span class="summary-label">' + tierLabel[tier] + '</span>' +
-    '</div>'
+    '</button>'
   ).join("");
+}
+
+function updateSummaryState(target, activeTier) {
+  target.querySelectorAll(".summary-item").forEach(card => {
+    const selected = card.dataset.tier === activeTier;
+    card.classList.toggle("active", selected);
+    card.setAttribute("aria-pressed", selected ? "true" : "false");
+  });
 }
 
 init();
