@@ -34,10 +34,6 @@
   }
 
   .topbar {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
-    gap: 24px;
-    align-items: start;
     margin-bottom: 18px;
   }
 
@@ -101,13 +97,19 @@
   }
 
   .controls {
-    max-width: 620px;
+    display: grid;
+    gap: 10px;
     margin-bottom: 14px;
+  }
+
+  .search-row {
+    display: flex;
+    justify-content: flex-end;
   }
 
   .search-wrap {
     position: relative;
-    align-self: start;
+    width: min(100%, 360px);
     padding: 12px;
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -631,10 +633,7 @@
 
   @media (max-width: 820px) {
     #wrap { padding: 22px 16px 26px; }
-    .topbar {
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
+    .search-row { justify-content: stretch; }
     h1 { font-size: 23px; }
   }
 
@@ -653,16 +652,18 @@
       <p class="sub">Country-by-country estimates of the likelihood that each country will ratify the adopted Decent Work in the Platform Economy Convention, based on voting behavior during the ILO negotiations, alignment among government, employer, and worker representatives, each country's history of ratifying ILO conventions, and the status of its domestic platform work laws. These tiers reflect my independent assessment. They are intended to guide research and discussion, not predict with certainty whether a country will ratify the Convention.</p>
       <div class="updated">Last updated: June 27, 2026</div>
     </div>
-    <div class="search-wrap">
-      <label class="search-label" for="search">Find a country</label>
-      <div class="search-field">
-        <input type="text" id="search" placeholder="Search by country name" autocomplete="off" aria-label="Search for a country">
-        <button class="search-clear" id="search-clear" title="Clear search" aria-label="Clear search">x</button>
-      </div>
-    </div>
   </header>
 
   <div class="controls">
+    <div class="search-row">
+      <div class="search-wrap">
+        <label class="search-label" for="search">Find a country</label>
+        <div class="search-field">
+          <input type="text" id="search" placeholder="Search by country name" autocomplete="off" aria-label="Search for a country">
+          <button class="search-clear" id="search-clear" title="Clear search" aria-label="Clear search">x</button>
+        </div>
+      </div>
+    </div>
     <div class="summary" id="summary" aria-label="Filter countries by likelihood tier"></div>
   </div>
 
@@ -762,6 +763,43 @@ const iloMemberNames = new Set([
   "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Zambia", "Zimbabwe"
 ]);
 
+const notEligibleReasons = {
+  "Andorra": "Not eligible: Andorra is not a member of the International Labour Organization (ILO) and therefore is not eligible to ratify ILO conventions.",
+  "Bhutan": "Not eligible: Bhutan is not a member of the International Labour Organization (ILO) and therefore is not eligible to ratify ILO conventions.",
+  "Federated States of Micronesia": "Not eligible: the Federated States of Micronesia is not a member of the International Labour Organization (ILO) and therefore is not eligible to ratify ILO conventions.",
+  "Micronesia": "Not eligible: the Federated States of Micronesia is not a member of the International Labour Organization (ILO) and therefore is not eligible to ratify ILO conventions.",
+  "Liechtenstein": "Not eligible: Liechtenstein is not a member of the International Labour Organization (ILO) and therefore is not eligible to ratify ILO conventions.",
+  "Monaco": "Not eligible: Monaco is not a member of the International Labour Organization (ILO) and therefore is not eligible to ratify ILO conventions.",
+  "Nauru": "Not eligible: Nauru is not a member of the International Labour Organization (ILO) and therefore is not eligible to ratify ILO conventions.",
+  "North Korea": "Not eligible: North Korea is not a member of the International Labour Organization (ILO) and therefore is not eligible to ratify ILO conventions.",
+  "Dem. Rep. Korea": "Not eligible: North Korea is not a member of the International Labour Organization (ILO) and therefore is not eligible to ratify ILO conventions.",
+  "Palestine": "Not eligible: Palestine participates in the International Labour Organization (ILO) as a non-member observer and therefore is not eligible to ratify ILO conventions.",
+  "Taiwan": "Not eligible: Taiwan is not a member of the International Labour Organization (ILO) and therefore is not eligible to ratify ILO conventions independently.",
+  "American Samoa": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Aruba": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Bermuda": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "British Virgin Islands": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Cayman Islands": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Curacao": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Curaçao": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Faroe Islands": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "French Polynesia": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Fr. Polynesia": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Gibraltar": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Greenland": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Guam": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Hong Kong": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Macao": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Macau": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "New Caledonia": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Northern Mariana Islands": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Puerto Rico": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Sint Maarten": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "Turks and Caicos Islands": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "U.S. Virgin Islands": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment.",
+  "United States Virgin Islands": "Not eligible: this jurisdiction does not independently ratify ILO conventions and was therefore not included in this assessment."
+};
+
 const metricRows = [
   ["ILC vote", "c1", c1Text],
   ["Ratification history", "c2", c2Text],
@@ -775,6 +813,7 @@ function formatScore(v) {
 }
 
 function noDataReason(name) {
+  if (notEligibleReasons[name]) return notEligibleReasons[name];
   if (iloMemberNames.has(name)) {
     return "This country is an ILO member, but it is not included in the ILC 114 voting-country dataset used for this map.";
   }
