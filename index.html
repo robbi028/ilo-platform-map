@@ -35,7 +35,7 @@
 
   .topbar {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
     gap: 24px;
     align-items: start;
     margin-bottom: 18px;
@@ -107,23 +107,70 @@
 
   .search-wrap {
     position: relative;
+    align-self: start;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(24, 38, 50, 0.07);
+  }
+
+  .search-label {
+    display: block;
+    margin: 0 0 7px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #53616c;
+  }
+
+  .search-field {
+    position: relative;
+  }
+
+  .search-field::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #7c8b96;
+    border-radius: 999px;
+    transform: translateY(-58%);
+    pointer-events: none;
+  }
+
+  .search-field::after {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    width: 7px;
+    height: 2px;
+    border-radius: 999px;
+    background: #7c8b96;
+    transform: translateY(4px) rotate(45deg);
+    pointer-events: none;
   }
 
   .search-wrap input {
     width: 100%;
-    padding: 9px 34px 9px 11px;
+    padding: 11px 38px 11px 38px;
     border: 1px solid #cbd3d8;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 15px;
     font-family: inherit;
     outline: none;
     color: var(--ink);
-    background: #fff;
+    background: #fbfcfc;
   }
 
   .search-wrap input:focus {
-    border-color: #687a89;
-    box-shadow: 0 0 0 3px rgba(104, 122, 137, 0.14);
+    border-color: #536f82;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(83, 111, 130, 0.16);
   }
 
   .search-clear {
@@ -607,8 +654,11 @@
       <div class="updated">Last updated: June 27, 2026</div>
     </div>
     <div class="search-wrap">
-      <input type="text" id="search" placeholder="Search for a country" autocomplete="off" aria-label="Search for a country">
-      <button class="search-clear" id="search-clear" title="Clear search" aria-label="Clear search">x</button>
+      <label class="search-label" for="search">Find a country</label>
+      <div class="search-field">
+        <input type="text" id="search" placeholder="Search by country name" autocomplete="off" aria-label="Search for a country">
+        <button class="search-clear" id="search-clear" title="Clear search" aria-label="Clear search">x</button>
+      </div>
     </div>
   </header>
 
