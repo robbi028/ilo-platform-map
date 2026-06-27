@@ -634,6 +634,28 @@ const tierOrder = ["High", "Moderate", "Low", "Very Low"];
 const noDataFill = "#f1efe8";
 const borderColor = "#ffffff";
 const dimFill = "#d9dee1";
+const iloMemberNames = new Set([
+  "Afghanistan", "Albania", "Algeria", "Argentina", "Armenia", "Australia", "Austria", "Bahamas",
+  "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Benin", "Botswana", "Brazil",
+  "Brunei", "Bulgaria", "Burkina Faso", "Cambodia", "Cameroon", "Canada", "Central African Rep.",
+  "Central African Republic", "Chile", "China", "Colombia", "Costa Rica", "Croatia", "Cyprus",
+  "Czechia", "Cote d'Ivoire", "Côte d'Ivoire", "Dem. Rep. Congo", "Denmark", "Djibouti",
+  "Dominican Rep.", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Eritrea",
+  "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Germany", "Ghana",
+  "Greece", "Grenada", "Guatemala", "Guinea", "Guyana", "Honduras", "Hungary", "Iceland",
+  "India", "Indonesia", "Iran", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan",
+  "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho",
+  "Liberia", "Libya", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi",
+  "Malaysia", "Mali", "Malta", "Mauritius", "Mexico", "Moldova", "Mongolia", "Montenegro",
+  "Morocco", "Mozambique", "Namibia", "Nepal", "Netherlands", "New Zealand", "Niger",
+  "Nigeria", "North Macedonia", "Norway", "Oman", "Pakistan", "Panama", "Paraguay", "Peru",
+  "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Samoa",
+  "San Marino", "Saudi Arabia", "Senegal", "Serbia", "Sierra Leone", "Singapore", "Slovakia",
+  "Slovenia", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka",
+  "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Tanzania", "Thailand", "Timor-Leste",
+  "Togo", "Trinidad and Tobago", "Tunisia", "Turkey", "Uganda", "Ukraine", "United Arab Emirates",
+  "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Zambia", "Zimbabwe"
+]);
 
 const metricRows = [
   ["ILC vote", "c1", c1Text],
@@ -645,6 +667,13 @@ const metricRows = [
 function formatScore(v) {
   if (v === null || v === undefined) return "n/a";
   return Math.round(v * 100) + "/100";
+}
+
+function noDataReason(name) {
+  if (iloMemberNames.has(name)) {
+    return "This country is an ILO member, but it is not included in the ILC 114 voting-country dataset used for this map.";
+  }
+  return "This area is outside the ILO voting-country dataset used for this map; it may be a non-member, territory, disputed area, or other unscored map geography.";
 }
 
 function escapeHtml(value) {
@@ -701,18 +730,25 @@ async function init() {
       .attr("role", d => scores[d.properties.name] ? "button" : null)
       .attr("aria-label", d => {
         const s = scores[d.properties.name];
-        return s ? d.properties.name + ", " + tierLabel[s.tier] : d.properties.name + ", no data";
+        return s ? d.properties.name + ", " + tierLabel[s.tier] : d.properties.name + ", no data. " + noDataReason(d.properties.name);
       })
-      .style("cursor", d => scores[d.properties.name] ? "pointer" : "default")
+      .style("cursor", d => scores[d.properties.name] ? "pointer" : "help")
       .on("mousemove focus", function(event, d) {
         const s = scores[d.properties.name];
-        if (!s) {
-          tooltip.style("display", "none");
-          return;
-        }
         const rect = document.getElementById("map").getBoundingClientRect();
         const x = event.clientX ? event.clientX - rect.left + 14 : rect.width / 2;
         const y = event.clientY ? event.clientY - rect.top - 10 : rect.height / 2;
+        if (!s) {
+          tooltip.style("display", "block")
+            .style("left", Math.min(x, rect.width - 295) + "px")
+            .style("top", Math.max(12, y) + "px")
+            .html(
+              '<div class="tt-name">' + escapeHtml(d.properties.name) + '</div>' +
+              '<div class="tt-tier">No data</div>' +
+              '<div class="tt-hint">' + escapeHtml(noDataReason(d.properties.name)) + '</div>'
+            );
+          return;
+        }
         tooltip.style("display", "block")
           .style("left", Math.min(x, rect.width - 295) + "px")
           .style("top", Math.max(12, y) + "px")
@@ -833,7 +869,7 @@ async function init() {
       paths.attr("fill", d => {
         const name = d.properties.name;
         const match = !q || name.toLowerCase().includes(q);
-        if (q && match && scores[name]) matches += 1;
+        if (q && match) matches += 1;
         return getFill(name, !match);
       });
       noResults.style.display = q && matches === 0 ? "block" : "none";
