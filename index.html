@@ -502,17 +502,40 @@
     font-weight: 600;
   }
 
-  .vote-bars {
+  .vote-cards {
     display: grid;
-    gap: 11px;
+    gap: 8px;
   }
 
-  .vote-row {
+  .vote-card {
     display: grid;
-    gap: 6px;
+    grid-template-columns: 1fr auto;
+    gap: 8px 12px;
+    align-items: start;
+    padding: 10px 11px;
+    border: 1px solid #e4e9ec;
+    border-left: 4px solid var(--vote-color);
+    border-radius: 8px;
+    background: #fff;
   }
 
-  .vote-row-head,
+  .vote-group {
+    font-size: 12px;
+    color: #53616c;
+  }
+
+  .vote-status {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .vote-counts {
+    grid-column: 1 / -1;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
   .ratification-head {
     display: flex;
     justify-content: space-between;
@@ -522,13 +545,11 @@
     color: #53616c;
   }
 
-  .vote-row-head strong,
   .ratification-head strong {
     color: var(--ink);
     font-weight: 700;
   }
 
-  .vote-bar,
   .ratification-bar {
     display: flex;
     width: 100%;
@@ -538,36 +559,9 @@
     background: #e6ebee;
   }
 
-  .vote-segment,
   .ratification-fill {
     display: block;
     height: 100%;
-  }
-
-  .vote-segment.yes { background: #168a4a; }
-  .vote-segment.no { background: #bd352c; }
-  .vote-segment.abstain { background: #d5a612; }
-
-  .vote-legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    font-size: 11px;
-    color: #53616c;
-  }
-
-  .vote-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .vote-chip::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    border-radius: 2px;
-    background: var(--chip-color);
   }
 
   .ratification-bar {
@@ -964,35 +958,19 @@ async function init() {
         return '<section class="detail-section"><h3 class="detail-title">Vote on Convention No. 193</h3><p class="detail-text">Vote detail is not available in the current handoff data.</p></section>';
       }
       return '<section class="detail-section"><h3 class="detail-title">Vote on Convention No. 193</h3>' +
-        '<div class="vote-bars">' + vote.map(renderVoteRow).join("") + '</div>' +
-        '<div class="vote-legend">' +
-          '<span class="vote-chip" style="--chip-color:#168a4a">Yes</span>' +
-          '<span class="vote-chip" style="--chip-color:#bd352c">No</span>' +
-          '<span class="vote-chip" style="--chip-color:#d5a612">Abstained</span>' +
-        '</div></section>';
+        '<div class="vote-cards">' + vote.map(renderVoteCard).join("") + '</div></section>';
     }
 
-    function renderVoteRow(row) {
+    function renderVoteCard(row) {
       const yes = Number(row.yes || 0);
       const total = Number(row.total || 0);
       const no = Number(row.no || 0);
       const abstain = Number(row.abstain || 0);
-      const denominator = Math.max(total, yes + no + abstain);
-      const remainder = Math.max(0, denominator - yes - no - abstain);
-      const yesPct = denominator ? (yes / denominator) * 100 : 0;
-      const noPct = denominator ? (no / denominator) * 100 : 0;
-      const abstainPct = denominator ? (abstain / denominator) * 100 : 0;
-      const emptyPct = denominator ? (remainder / denominator) * 100 : 100;
-
-      return '<div class="vote-row">' +
-        '<div class="vote-row-head"><span>' + escapeHtml(row.label) + '</span><strong>' + voteStanceText(yes, no, abstain, denominator) + '</strong></div>' +
-        '<div class="vote-bar" aria-label="' + escapeHtml(row.label) + ': ' + yes + ' yes, ' + no + ' no, ' + abstain + ' abstained">' +
-          '<span class="vote-segment yes" style="width:' + yesPct + '%"></span>' +
-          '<span class="vote-segment no" style="width:' + noPct + '%"></span>' +
-          '<span class="vote-segment abstain" style="width:' + abstainPct + '%"></span>' +
-          '<span class="vote-segment" style="width:' + emptyPct + '%"></span>' +
-        '</div>' +
-        '<div class="detail-meta">' + yes + ' yes / ' + no + ' no / ' + abstain + ' abstained</div>' +
+      const status = voteStanceText(yes, no, abstain, total);
+      return '<div class="vote-card" style="--vote-color:' + voteColor(status) + '" aria-label="' + escapeHtml(row.label) + ': ' + yes + ' yes, ' + no + ' no, ' + abstain + ' abstained">' +
+        '<div class="vote-group">' + escapeHtml(row.label) + '</div>' +
+        '<div class="vote-status">' + status + '</div>' +
+        '<div class="vote-counts">' + voteCountText(yes, no, abstain, total) + '</div>' +
       '</div>';
     }
 
@@ -1003,6 +981,19 @@ async function init() {
       if (max === no && no > yes && no > abstain) return 'Opposed';
       if (max === abstain && abstain > yes && abstain > no) return 'Abstained';
       return 'Mixed';
+    }
+
+    function voteColor(status) {
+      if (status === 'Supported') return '#168a4a';
+      if (status === 'Opposed') return '#bd352c';
+      if (status === 'Abstained') return '#d5a612';
+      if (status === 'Mixed') return '#536f82';
+      return '#c5cdd2';
+    }
+
+    function voteCountText(yes, no, abstain, total) {
+      if (!total) return 'No delegate vote recorded';
+      return yes + ' yes / ' + no + ' no / ' + abstain + ' abstained';
     }
 
     function renderRatificationSection(ratification) {
