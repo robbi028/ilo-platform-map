@@ -744,7 +744,7 @@
         "law": "Foodora-Fellesforbundet collective agreement (Sept 2019)",
         "url": "https://www.fellesforbundet.no/globalassets/in-english/collective-agreement-settlements/cas-2020/foodora-collective-agreement---use-your-voting-rights.pdf",
         "status": "private collective agreement",
-        "note": "UNVERIFIED CLAIM: a 2026 Working Environment Act amendment may have formalized platform worker status further - needs confirmation before any score change"
+        "note": "a 2026 Working Environment Act amendment may have formalized platform worker status further - needs confirmation before any score change"
       }
     }
   },
@@ -2177,7 +2177,7 @@
         "law": "Bill C-69, Budget Implementation Act 2024 No.1 (Royal Assent 20 Jun 2024)",
         "url": "https://www.parl.ca/documentviewer/en/44-1/bill/C-69/royal-assent",
         "status": "enacted (federal)",
-        "note": "Upgrade candidate: enacted federal statute w/ gig-worker misclassification presumption, not just provincial action"
+        "note": "enacted federal statute w/ gig-worker misclassification presumption, not just provincial action"
       }
     }
   },
@@ -2592,7 +2592,7 @@
     "c4": 0.833,
     "normlex_total": 84,
     "c3_source": "direct verification",
-    "note": "FLAG: Active 2026 labor reform (Senate-passed) moves opposite direction from worker protection -- explicitly classifies platform workers as independent contractors under Civil/Commercial Code, excluded from Ley de Contrato de Trabajo, with no collective bargaining, no severance, no traditional labor rights. This is deregulation, not a protective platform-worker statute. Recommend downgrading composite outlook to reflect this; ratification of an ILO worker-protective convention is unlikely while this domestic deregulatory framework is being actively pursued.",
+    "note": "Active 2026 labor reform (Senate-passed) moves opposite direction from worker protection -- explicitly classifies platform workers as independent contractors under Civil/Commercial Code, excluded from Ley de Contrato de Trabajo, with no collective bargaining, no severance, no traditional labor rights. This is deregulation, not a protective platform-worker statute. Recommend downgrading composite outlook to reflect this; ratification of an ILO worker-protective convention is unlikely while this domestic deregulatory framework is being actively pursued.",
     "tooltip": {
       "vote": [
         {
@@ -2624,9 +2624,9 @@
       },
       "legislation": {
         "type": "text",
-        "text": "FLAGGED: 2026 Senate-passed reform reclassifies platform workers as independent contractors under Civil/Commercial Code, excludes them from Ley de Contrato de Trabajo. This is deregulation, not protective legislation. C3 downgraded 0.5->0.0; ratification assessed as unlikely given this domestic policy direction.",
+        "text": "2026 Senate-passed reform reclassifies platform workers as independent contractors under Civil/Commercial Code, excludes them from Ley de Contrato de Trabajo. This is deregulation, not protective legislation. C3 downgraded 0.5->0.0; ratification assessed as unlikely given this domestic policy direction.",
         "status": "deregulatory direction",
-        "note": "FLAGGED: 2026 Senate-passed reform reclassifies platform workers as independent contractors under Civil/Commercial Code, excludes them from Ley de Contrato de Trabajo. This is deregulation, not protective legislation. C3 downgraded 0.5->0.0; ratification assessed as unlikely given this domestic policy direction."
+        "note": "2026 Senate-passed reform reclassifies platform workers as independent contractors under Civil/Commercial Code, excludes them from Ley de Contrato de Trabajo. This is deregulation, not protective legislation. C3 downgraded 0.5->0.0; ratification assessed as unlikely given this domestic policy direction."
       }
     }
   },
@@ -4753,7 +4753,7 @@
     "c4": 0.833,
     "normlex_total": 48,
     "c3_source": "direct verification - upgraded",
-    "note": "UPDATE: Code on Social Security, 2020 (Act No. 36 of 2020) came into force Nov 21, 2025 -- formally recognizes gig/platform workers, establishes Social Security Fund (1-2% aggregator turnover contribution), National Social Security Board. This is now an enacted national statute, not a draft/narrow framework.",
+    "note": "Code on Social Security, 2020 (Act No. 36 of 2020) came into force Nov 21, 2025 -- formally recognizes gig/platform workers, establishes Social Security Fund (1-2% aggregator turnover contribution), National Social Security Board. This is now an enacted national statute, not a draft/narrow framework.",
     "tooltip": {
       "vote": [
         {
@@ -4788,7 +4788,7 @@
         "law": "Code on Social Security, 2020 (Act No. 36 of 2020) - in force 21 Nov 2025",
         "url": "https://www.indiacode.nic.in/bitstream/123456789/16823/1/aA2020-36.pdf",
         "status": "enacted",
-        "note": "UPGRADE: now enacted national statute formally recognizing gig/platform workers, Social Security Fund, not draft"
+        "note": "now enacted national statute formally recognizing gig/platform workers, Social Security Fund, not draft"
       }
     }
   },
@@ -6456,7 +6456,7 @@
         "law": "Rasier Operations BV & Ors v. E Tū Incorporated & Anor [2025] NZSC 162 (17 Nov 2025)",
         "url": "N/A - no direct official court link found; case citation only",
         "status": "case law, final ruling",
-        "note": "UPGRADE: now final/conclusive at Supreme Court. Tension with pending Employment Relations Amendment Bill that would legislatively override via excluding contractors from challenging status."
+        "note": "now final/conclusive at Supreme Court. Tension with pending Employment Relations Amendment Bill that would legislatively override via excluding contractors from challenging status."
       }
     }
   },
