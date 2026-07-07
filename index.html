@@ -19,7 +19,8 @@
   #wrap { max-width: 1200px; margin: 0 auto; padding: 40px 24px 30px; box-sizing: border-box; }
   h1 { font-size: 22px; font-weight: 600; margin: 0 0 4px; }
   .sub { font-size: 13.5px; color: #4a4a4a; margin: 0 0 10px; line-height: 1.6; max-width: 980px; }
-  .hero { display: grid; grid-template-columns: minmax(0, 3fr) minmax(240px, 1fr); gap: 24px; align-items: start; margin-bottom: 18px; }
+  .hero { margin-bottom: 18px; }
+  .hero-body { display: grid; grid-template-columns: minmax(0, 3fr) minmax(240px, 1fr); gap: 24px; align-items: start; }
   .author-link { display: inline-flex; align-items: center; gap: 7px; padding: 8px 10px; border: 1px solid #e6e6e6; border-radius: 8px; background: #fff; color: #53616c; font-size: 12px; text-decoration: none; white-space: nowrap; }
   .author-link:hover { color: #0a66c2; border-color: #b7c8d8; }
   .title-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 8px 0 14px; }
@@ -79,15 +80,17 @@
 
   .footer { font-size: 11px; color: #9a9a9a; margin-top: 14px; line-height: 1.5; }
   .disclaimer { font-size: 11px; color: #b0b0b0; margin-top: 10px; line-height: 1.5; border-top: 1px solid #f0f0f0; padding-top: 10px; }
-  .info-accordions { display: grid; gap: 10px; }
-  .info-accordions details { border: 1px solid #e2e2e2; border-radius: 8px; background: #fff; }
+  .info-accordions { display: grid; gap: 10px; position: relative; z-index: 20; }
+  .info-accordions details { position: relative; border: 1px solid #e2e2e2; border-radius: 8px; background: #fff; }
+  .info-accordions details[open] { z-index: 30; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
   .info-accordions summary { cursor: pointer; padding: 12px 14px; font-size: 13px; font-weight: 600; color: #1a1a1a; }
-  .info-accordions .info-body { padding: 0 14px 14px; font-size: 13px; line-height: 1.6; color: #333; }
+  .info-accordions .info-body { display: none; position: absolute; left: -1px; right: -1px; top: calc(100% - 1px); padding: 0 14px 14px; font-size: 13px; line-height: 1.6; color: #333; background: #fff; border: 1px solid #e2e2e2; border-top: 0; border-radius: 0 0 8px 8px; box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
+  .info-accordions details[open] .info-body { display: block; }
   .info-accordions blockquote { margin: 10px 0; padding-left: 12px; border-left: 3px solid #e2e2e2; color: #4a4a4a; }
   .info-accordions ul { margin: 10px 0 0 18px; padding: 0; }
   .info-accordions li { margin: 4px 0; }
   @media (max-width: 860px) {
-    .hero { grid-template-columns: 1fr; }
+    .hero-body { grid-template-columns: 1fr; }
     .info-accordions { margin-top: 6px; }
   }
 </style>
@@ -95,50 +98,52 @@
 <body>
 <div id="wrap">
   <div class="hero">
-    <div class="hero-copy">
-      <h1>Likelihood of ratifying ILO Convention No. 193 (Platform Economy)</h1>
-      <div class="title-meta">
-        <a class="author-link" href="https://www.linkedin.com/in/pbshapiro/" target="_blank" rel="noopener"><span>Created by Patty Shapiro</span><span class="author-in" aria-hidden="true">in</span></a>
-        <span class="last-updated">Last Updated: July 2026</span>
-      </div>
+    <h1>Likelihood of ratifying ILO Convention No. 193 (Platform Economy)</h1>
+    <div class="title-meta">
+      <a class="author-link" href="https://www.linkedin.com/in/pbshapiro/" target="_blank" rel="noopener"><span>Created by Patty Shapiro</span><span class="author-in" aria-hidden="true">in</span></a>
+      <span class="last-updated">Last Updated: July 2026</span>
+    </div>
+    <div class="hero-body">
+      <div class="hero-copy">
       <p class="sub">On June 12, 2026, the International Labour Conference (ILO) adopted Convention No. 193 -- the first binding international standard for platform work. Countries now have 12 months to submit the Convention before their national legislature, who may or may not choose to ratify it. Ratifications must be registered with the ILO Secretariat, and the Convention will enter into force 12 months after the second ratification is registered.</p>
       <p class="sub">The map below illustrates my opinion on which countries are or are not likely to ratify considering how its delegates voted at the Conference (including whether government, employer, and employee delegates were aligned), whether it has historically ratified ILO conventions, and whether it has existing legislation on platform work. Click any country for more details.</p>
-    </div>
-    <div class="info-accordions">
-      <details>
-        <summary>Which companies would this impact?</summary>
-        <div class="info-body">
-          <p>The Convention applies to all &ldquo;digital labor platforms,&rdquo; which are defined as:</p>
-          <blockquote>&ldquo;a legal person or, where applicable under national law, natural person that, through digital technologies, using automated decision making systems: (i) organizes and/or facilitates work performed by persons for remuneration or payment, for the provision of service, upon request of the recipient or requestor; (ii) regardless of whether that work is performed online or in a specific geographic location.&rdquo;</blockquote>
-          <p>It applies regardless of whether that work is performed online or in a specific geographic location, which means both remote/online work and location-based work (delivery, ride-hail) are impacted.</p>
-        </div>
-      </details>
-      <details>
-        <summary>Does this apply to independent contractors?</summary>
-        <div class="info-body">
-          <p>Yes. The Convention applies to all &ldquo;digital platform workers,&rdquo; which are defined as:</p>
-          <blockquote>&ldquo;a person employed or engaged to work: (i) for the provision of service organized and/or facilitated by a digital labour platform; (ii) for remuneration or payment; and (iii) regardless of their classification of status in employment.&rdquo;</blockquote>
-          <p>Although the Convention does not mandate that digital platform workers be classified as employees, it requires ratifying countries to determine classification based on the actual circumstances of the arrangement. It also extends benefits and protections to digital platform workers irrespective of their official classification under domestic law.</p>
-        </div>
-      </details>
-      <details>
-        <summary>What would ratification mean?</summary>
-        <div class="info-body">
-          <p>The Convention establishes the following baseline protections and benefits for digital platform workers (among others), which individual countries may choose to expand on when they implement the Convention into domestic law.</p>
-          <ul>
-            <li>Clear terms and conditions of engagement</li>
-            <li>Minimum wage rights</li>
-            <li>Work-related expense reimbursement</li>
-            <li>Social security coverage</li>
-            <li>Safe working conditions, including protection from violence and harassment at work</li>
-            <li>Transparency on the use of AI</li>
-            <li>Mandatory human involvement for decisions on pay, suspension, deactivation, or termination, including written explanations for the same</li>
-            <li>Data privacy protections</li>
-            <li>Access to dispute resolution mechanisms</li>
-          </ul>
-          <p>The Convention text is available <a href="https://www.ilo.org/resource/record-decisions/convention-concerning-decent-work-platform-economy-2026" target="_blank" rel="noopener">here</a>.</p>
-        </div>
-      </details>
+      </div>
+      <div class="info-accordions">
+        <details>
+          <summary>Which companies would this impact?</summary>
+          <div class="info-body">
+            <p>The Convention applies to all &ldquo;digital labor platforms,&rdquo; which are defined as:</p>
+            <blockquote>&ldquo;a legal person or, where applicable under national law, natural person that, through digital technologies, using automated decision making systems: (i) organizes and/or facilitates work performed by persons for remuneration or payment, for the provision of service, upon request of the recipient or requestor; (ii) regardless of whether that work is performed online or in a specific geographic location.&rdquo;</blockquote>
+            <p>It applies regardless of whether that work is performed online or in a specific geographic location, which means both remote/online work and location-based work (delivery, ride-hail) are impacted.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Does this apply to independent contractors?</summary>
+          <div class="info-body">
+            <p>Yes. The Convention applies to all &ldquo;digital platform workers,&rdquo; which are defined as:</p>
+            <blockquote>&ldquo;a person employed or engaged to work: (i) for the provision of service organized and/or facilitated by a digital labour platform; (ii) for remuneration or payment; and (iii) regardless of their classification of status in employment.&rdquo;</blockquote>
+            <p>Although the Convention does not mandate that digital platform workers be classified as employees, it requires ratifying countries to determine classification based on the actual circumstances of the arrangement. It also extends benefits and protections to digital platform workers irrespective of their official classification under domestic law.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What would ratification mean?</summary>
+          <div class="info-body">
+            <p>The Convention establishes the following baseline protections and benefits for digital platform workers (among others), which individual countries may choose to expand on when they implement the Convention into domestic law.</p>
+            <ul>
+              <li>Clear terms and conditions of engagement</li>
+              <li>Minimum wage rights</li>
+              <li>Work-related expense reimbursement</li>
+              <li>Social security coverage</li>
+              <li>Safe working conditions, including protection from violence and harassment at work</li>
+              <li>Transparency on the use of AI</li>
+              <li>Mandatory human involvement for decisions on pay, suspension, deactivation, or termination, including written explanations for the same</li>
+              <li>Data privacy protections</li>
+              <li>Access to dispute resolution mechanisms</li>
+            </ul>
+            <p>The Convention text is available <a href="https://www.ilo.org/resource/record-decisions/convention-concerning-decent-work-platform-economy-2026" target="_blank" rel="noopener">here</a>.</p>
+          </div>
+        </details>
+      </div>
     </div>
   </div>
   <div class="legend">
