@@ -968,7 +968,7 @@ async function init() {
   const noResults = document.getElementById("no-results");
 
   try {
-    const scores = await fetch("scores.json").then(r => {
+    const scores = await fetch("scores.json?v=5fe99b6").then(r => {
       if (!r.ok) throw new Error("Could not load scores.json");
       return r.json();
     });
