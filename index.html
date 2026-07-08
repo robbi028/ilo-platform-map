@@ -29,6 +29,8 @@
   .last-updated { color: #6b6b6b; font-size: 12px; }
   .author-in { display: inline-grid; place-items: center; width: 17px; height: 17px; border-radius: 4px; background: #0a66c2; color: #fff; font-size: 11px; font-weight: 700; line-height: 1; }
   .legend { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 14px; font-size: 13px; }
+  .legend span[data-tier] { cursor: pointer; }
+  .legend span[data-tier].active { font-weight: 600; }
   .legend span.dot { display: inline-block; width: 13px; height: 13px; border-radius: 3px; margin-right: 6px; vertical-align: -2px; }
 
   .search-wrap { margin-bottom: 12px; position: relative; max-width: 280px; }
@@ -148,11 +150,11 @@
     </div>
   </div>
   <div class="legend">
-    <span><span class="dot" style="background:#2E9E44"></span>High likelihood</span>
-    <span><span class="dot" style="background:#E8C72E"></span>Some likelihood</span>
-    <span><span class="dot" style="background:#E8821E"></span>Low likelihood</span>
-    <span><span class="dot" style="background:#C0392B"></span>Very low likelihood</span>
-    <span><span class="dot" style="background:#F1EFE8;border:1px solid #ddd"></span>No data</span>
+    <span data-tier="High"><span class="dot" style="background:#2E9E44"></span>High likelihood</span>
+    <span data-tier="Moderate"><span class="dot" style="background:#E8C72E"></span>Some likelihood</span>
+    <span data-tier="Low"><span class="dot" style="background:#E8821E"></span>Low likelihood</span>
+    <span data-tier="Very Low"><span class="dot" style="background:#C0392B"></span>Very low likelihood</span>
+    <span data-tier="No Data"><span class="dot" style="background:#F1EFE8;border:1px solid #ddd"></span>No data</span>
   </div>
 
   <div class="search-wrap">
@@ -356,26 +358,41 @@ async function init() {
   // Search
   const searchInput = document.getElementById('search');
   const searchClear  = document.getElementById('search-clear');
+  const legendItems = document.querySelectorAll('.legend span[data-tier]');
+  let activeTier = null;
 
-  function applySearch(query) {
-    const q = query.trim().toLowerCase();
+  function matchesTier(name) {
+    if (!activeTier) return true;
+    const s = scores[name];
+    return activeTier === 'No Data' ? !s : s && s.tier === activeTier;
+  }
+
+  function applyFilters() {
+    const q = searchInput.value.trim().toLowerCase();
     searchClear.style.display = q ? 'block' : 'none';
+    legendItems.forEach(item => item.classList.toggle('active', item.dataset.tier === activeTier));
     paths.attr('fill', d => {
       const name = d.properties.name;
-      const match = !q || name.toLowerCase().includes(q);
+      const match = (!q || name.toLowerCase().includes(q)) && matchesTier(name);
       return getFill(name, !match);
     });
     markerSel.attr('fill', m => {
-      const match = !q || m.name.toLowerCase().includes(q);
+      const match = (!q || m.name.toLowerCase().includes(q)) && matchesTier(m.name);
       return getFill(m.name, !match);
     });
   }
 
-  searchInput.addEventListener('input', () => applySearch(searchInput.value));
+  searchInput.addEventListener('input', () => applyFilters());
   searchClear.addEventListener('click', () => {
     searchInput.value = '';
-    applySearch('');
+    applyFilters();
     searchInput.focus();
+  });
+  legendItems.forEach(item => {
+    item.addEventListener('click', () => {
+      activeTier = activeTier === item.dataset.tier ? null : item.dataset.tier;
+      applyFilters();
+    });
   });
 }
 
